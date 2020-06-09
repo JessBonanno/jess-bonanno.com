@@ -77,8 +77,12 @@ export default createMuiTheme({
     },
 
     h3: {},
-    h4: {},
-    subtitle1: {},
+    h4: {
+      color: lightBlue,
+    },
+    subtitle1: {
+      color: lightBlue,
+    },
     subtitle2: {},
     body1: {},
     caption: {},

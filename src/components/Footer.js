@@ -110,7 +110,7 @@ export default function Footer(props) {
                     props.setValue(1);
                     props.setSelectedIndex(0);
                   }}
-                  // to='/projects'
+                  to='/projects'
                   item
                   className={classes.link}>
                   Projects

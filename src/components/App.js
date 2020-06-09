@@ -7,6 +7,7 @@ import Header from './Header';
 import LandingPage from './LandingPage';
 import Footer from './Footer';
 import Resume from './Resume';
+import Projects from './Projects';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -43,7 +44,19 @@ function App() {
                 setValue={setValue}
               />
             )}
-          />{' '}
+          />
+                    <Route
+            exact
+            path="/projects"
+            render={(props) => (
+              <Projects
+                {...props}
+                setSelectedIndex={setSelectedIndex}
+                setValue={setValue}
+              />
+            )}
+          />
+
           <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
         </Router>
       </ThemeProvider>

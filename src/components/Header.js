@@ -37,6 +37,7 @@ function ElevationScroll(props) {
 const useStyles = makeStyles((theme) => ({
   name: {
     ...theme.typography.tab,
+    textDecoration: 'none',
     fontFamily: 'Shadows Into Light Two, cursive',
     minWidth: 10,
     marginLeft: '25px',
@@ -54,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     ...theme.typography.tab,
     minWidth: 10,
     marginLeft: '10px',
-    marginRight: '10px'
+    marginRight: '10px',
   },
   button: {
     ...theme.typography.estimate,
@@ -93,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.slate,
     marginTop: '4em',
     minWidth: 250,
-    opacity: .9,
+    opacity: 0.9,
     [theme.breakpoints.down('sm')]: {
       minWidth: 180,
     },
@@ -113,7 +114,6 @@ const useStyles = makeStyles((theme) => ({
   },
   appbar: {
     zIndex: theme.zIndex.modal + 1,
-
   },
 }));
 
@@ -121,8 +121,7 @@ export default function Header(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
@@ -151,7 +150,7 @@ export default function Header(props) {
   const menuOptions = [
     {
       name: 'Projects',
-      // link: '/projects',
+      link: '/projects',
       activeIndex: 1,
       selectedIndex: 0,
     },
@@ -183,7 +182,7 @@ export default function Header(props) {
     },
     {
       name: 'Projects',
-      // link: '/projects',
+      link: '/projects',
       activeIndex: 1,
       ariaOwns: anchorEl ? 'simple-menu' : undefined,
       ariaPopup: anchorEl ? 'true' : undefined,
@@ -324,10 +323,16 @@ export default function Header(props) {
         <AppBar className={classes.appbar}>
           {/* disableGutters defaults to disableGutters={true} */}
           <Toolbar disableGutters>
-            <Typography className={classes.name}>
+            <Typography className={classes.name} component={Link} to='/' >
               Jess Bonanno{' '}
-              <span style={{    fontFamily: 'Exo, sans-serif',
- fontSize: matchesSM ? '1rem' : '1.3rem', marginLeft: '1em' }}>a fullstack dev</span>
+              <span
+                style={{
+                  fontFamily: 'Exo, sans-serif',
+                  fontSize: matchesSM ? '1rem' : '1.3rem',
+                  marginLeft: '1em',
+                }}>
+                a fullstack dev
+              </span>
             </Typography>
             {/* conditionally rendering drawer or tabs based on screen size */}
             {matchesMD ? drawer : tabs}
