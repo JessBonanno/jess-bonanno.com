@@ -49,8 +49,8 @@ const useStyles = makeStyles((theme) => ({
     margin: '2em',
   },
   icon: {
-    height: '2em',
-    width: '2em',
+    // height: '2em',
+    // width: '2em',
     color: theme.palette.secondary.main,
     [theme.breakpoints.down('xs')]: {
       height: '2.5em',
