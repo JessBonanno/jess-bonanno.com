@@ -84,8 +84,14 @@ export default createMuiTheme({
       color: lightBlue,
     },
     subtitle2: {},
-    body1: {},
-    caption: {},
+    body1: {
+      fontSize: '1.2rem',
+      color: paleGreen,
+    },
+    caption: {
+      fontSize: '.9rem',
+      color: yellow,
+    },
   },
   overrides: {
     MuiInputLabel: {
