@@ -52,10 +52,10 @@ const useStyles = makeStyles((theme) => ({
     // height: '2em',
     // width: '2em',
     color: theme.palette.secondary.main,
-    [theme.breakpoints.down('xs')]: {
-      height: '2.5em',
-      width: '2.5em',
-    },
+    // [theme.breakpoints.down('xs')]: {
+    //   height: '2.5em',
+    //   width: '2.5em',
+    // },
   },
   socialContainer: {
     backgroundColor: theme.palette.common.slate,
