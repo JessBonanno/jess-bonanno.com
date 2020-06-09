@@ -17,9 +17,10 @@ const useStyles = makeStyles({
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
-    // [theme.breakpoints.down('sm')]: {
-    //   backgroundPosition: 'center',
-    // },
+    [theme.breakpoints.down('sm')]: {
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${mobileLoveCode})`,
+      backgroundPosition: 'center',
+    },
   },
 });
 export default function LandingPage() {

@@ -12,28 +12,30 @@ function App() {
   const [value, setValue] = useState(0);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <Header
-          value={value}
-          setValue={setValue}
-          selectedIndex={selectedIndex}
-          setSelectedIndex={setSelectedIndex}
-        />
-        <Route
-          exact
-          path='/'
-          render={(props) => (
-            <LandingPage
-              {...props}
-              setSelectedIndex={setSelectedIndex}
-              setValue={setValue}
-            />
-          )}
-        />{' '}
-        <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
-      </Router>
-    </ThemeProvider>
+    <div className='App'>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Header
+            value={value}
+            setValue={setValue}
+            selectedIndex={selectedIndex}
+            setSelectedIndex={setSelectedIndex}
+          />
+          <Route
+            exact
+            path='/'
+            render={(props) => (
+              <LandingPage
+                {...props}
+                setSelectedIndex={setSelectedIndex}
+                setValue={setValue}
+              />
+            )}
+          />{' '}
+          <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
+        </Router>
+      </ThemeProvider>
+    </div>
   );
 }
 
