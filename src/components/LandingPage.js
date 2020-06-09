@@ -11,17 +11,31 @@ import mobileLoveCode from '../assets/images/mobile-love-code.jpg';
 
 const useStyles = makeStyles({
   mainContainer: {
-    marginTop: '4em',
+    margin: '4em 0 15em',
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
     width: '100%',
-    minHeight: '100vh%',
+    minHeight: '100vh',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '10em',
+      backgroundPosition: 'center',
+    },
+    [theme.breakpoints.down('xs')]: {
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${mobileLoveCode})`,
       backgroundPosition: 'center',
       minHeight: 800,
+      marginBottom: 0,
+    },
+  },
+  headline: {
+    lineHeight: 2,
+    [theme.breakpoints.down('md')]: {
+      fontSize: '4rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2.5rem',
     },
   },
 });
@@ -29,6 +43,7 @@ export default function LandingPage() {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+  const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -40,12 +55,17 @@ export default function LandingPage() {
         <Typography
           className={classes.headline}
           variant='h1'
-          style={{ fontSize: matchesSM && '2.5rem', marginTop: '2em' }}>
+          style={{ marginTop: matchesMD ? '3em' : '1em' }}>
           When you love what you do
         </Typography>
         <Typography
           variant='h2'
-          style={{ fontSize: matchesSM && '2.3rem', marginTop: '1em' }}>
+          className={classes.headline}
+          style={{
+            fontFamily: 'Nanum Brush Script, cursive',
+            fontSize: matchesSM ? '4rem' : '7rem',
+            marginTop: matchesMD && '1em',
+          }}>
           Is it even work?
         </Typography>
       </Grid>

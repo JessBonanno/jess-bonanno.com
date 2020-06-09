@@ -35,29 +35,15 @@ function ElevationScroll(props) {
 }
 
 const useStyles = makeStyles((theme) => ({
-  logo: {
-    height: '8em',
-    [theme.breakpoints.down('md')]: {
-      height: '7em',
-    },
-    [theme.breakpoints.down('xs')]: {
-      height: '5.5em',
-    },
-  },
-  logoContainer: {
-    padding: 0,
-    '&:hover': {
-      backgroundColor: 'transparent',
-    },
-  },
   name: {
     ...theme.typography.tab,
+    fontFamily: 'Shadows Into Light Two, cursive',
     minWidth: 10,
     marginLeft: '25px',
-    fontSize: '1.6rem',
+    fontSize: '2rem',
     color: theme.palette.common.paleGreen,
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1.2rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.5rem',
     },
   },
   tabContainer: {
@@ -95,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
   drawerIcon: {
     height: '50px',
     width: '50px',
+    color: theme.palette.secondary.main,
   },
   drawerIconContainer: {
     marginLeft: 'auto',
@@ -106,6 +93,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.slate,
     marginTop: '4em',
     minWidth: 250,
+    opacity: .9,
     [theme.breakpoints.down('sm')]: {
       minWidth: 180,
     },
@@ -125,13 +113,14 @@ const useStyles = makeStyles((theme) => ({
   },
   appbar: {
     zIndex: theme.zIndex.modal + 1,
+
   },
 }));
 
 export default function Header(props) {
   const classes = useStyles();
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('md'));
+  const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
 
@@ -244,7 +233,7 @@ export default function Header(props) {
         value={props.value}
         className={classes.tabContainer}
         onChange={handleTabChange}
-        indicatorColor='primary'>
+        indicatorColor='secondary'>
         {routes.map((route, index) => (
           <Tab
             key={`${route}${index}`}
@@ -337,10 +326,11 @@ export default function Header(props) {
           <Toolbar disableGutters>
             <Typography className={classes.name}>
               Jess Bonanno{' '}
-              <span style={{ fontSize: matchesSM ? '1rem' : '1.2rem', marginLeft: '1em' }}>a fullstack dev</span>
+              <span style={{    fontFamily: 'Exo, sans-serif',
+ fontSize: matchesSM ? '1rem' : '1.3rem', marginLeft: '1em' }}>a fullstack dev</span>
             </Typography>
             {/* conditionally rendering drawer or tabs based on screen size */}
-            {matches ? drawer : tabs}
+            {matchesMD ? drawer : tabs}
           </Toolbar>
         </AppBar>
       </ElevationScroll>

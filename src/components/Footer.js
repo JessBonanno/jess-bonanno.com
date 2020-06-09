@@ -11,28 +11,25 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import theme from './ui/Theme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-
-import footerAdornment from '../assets/images/Footer Adornment.svg';
-
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.common.slate,
     backgroundSize: 'cover',
     // ! zIndex and position set below to make the footer sit on top of the menu when its open
     zIndex: 1302,
-    position: 'relative',
+    position: 'absolute',
     bottom: 0,
     width: '100%',
   },
 
   name: {
     ...theme.typography.tab,
-    fontSize: '1.6rem',
+    fontFamily: 'Shadows Into Light Two, cursive',
+    fontSize: '2rem',
     color: theme.palette.common.paleGreen,
     [theme.breakpoints.down('xs')]: {
-        fontSize: '1.2rem',
-      },
-  
+      fontSize: '1.2rem',
+    },
   },
   mainContainer: {
     // position: 'absolute',
@@ -40,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     color: theme.palette.secondary.main,
-    fontFamily: 'Arial',
+    fontFamily: 'Lexend Giga, sans-serif',
     fontSize: '1rem',
     fontWeight: 400,
     textDecoration: 'none',
@@ -68,12 +65,25 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer(props) {
   const classes = useStyles();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <footer className={classes.footer}>
       <Grid item container direction='row' justify='center'>
+        <Grid item className={classes.gridItem}>
+          <Typography className={classes.name}>
+            Jess Bonanno{' '}
+            <span
+              style={{
+                fontFamily: 'Exo, sans-serif',
+                fontSize: matchesSM ? '1rem' : '1.2rem',
+                marginLeft: '1em',
+              }}>
+              a fullstack dev
+            </span>
+          </Typography>
+        </Grid>
+
         <Hidden mdDown>
           <Grid
             item
@@ -178,12 +188,6 @@ export default function Footer(props) {
             </Grid>
           </Grid>
         </Hidden>
-        <Grid item className={classes.gridItem}>
-          <Typography className={classes.name}>
-            Jess Bonanno{' '}
-            <span style={{ fontSize: matchesSM ? '1rem' : '1.2rem', marginLeft: '1em' }}>a fullstack dev</span>
-          </Typography>
-        </Grid>
 
         <Grid
           container

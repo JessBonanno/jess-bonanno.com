@@ -12,6 +12,9 @@ const orange = '#FF2635';
 const gray = '#8C8C8C';
 const paleGreen = '#B0D9BD';
 
+const bebasFont = 'Bebas Neue, sans-serif';
+const nanumFont = 'Nanum Brush Script, cursive';
+const shadowsFont = 'Shadows Into Light Two, cursive';
 const comfortaaFont = 'Comfortaa, cursive';
 const exoFont = 'Exo, sans-serif';
 const hindFont = 'Hind Vadodara, sans-serif';
@@ -47,6 +50,7 @@ export default createMuiTheme({
       color: orange,
       fontSize: '1.2rem',
       fontWeight: '400',
+      fontFamily: lexendFont,
     },
     name: {
       color: orange,
@@ -54,18 +58,19 @@ export default createMuiTheme({
       fontWeight: '400',
     },
     h1: {
+      letterSpacing: 5,
       fontSize: '5.6rem',
       lineHeight: 1.2,
       textAlign: 'center',
-      color: '#EBEBEB',
-      fontFamily: poppinsFont,
+      color: orange,
+      fontFamily: bebasFont,
        
     },
     h2: {
       fontSize: '5.6rem',
       lineHeight: 1.2,
       textAlign: 'center',
-      color: '#EBEBEB',
+      color: orange,
       fontFamily: poppinsFont,
     },
 
