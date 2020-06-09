@@ -162,25 +162,25 @@ export default function Header(props) {
   const menuOptions = [
     {
       name: 'Projects',
-      link: '/projects',
+      // link: '/projects',
       activeIndex: 1,
       selectedIndex: 0,
     },
     {
       name: 'Planner App',
-      link: '/planner',
+      // link: '/planner',
       activeIndex: 1,
       selectedIndex: 1,
     },
     {
       name: 'Isolation Recommendations',
-      link: '/isolation-recommendations',
+      // link: '/isolation-recommendations',
       activeIndex: 1,
       selectedIndex: 2,
     },
     {
       name: 'Arc Development',
-      link: '/arc',
+      // link: '/arc',
       activeIndex: 1,
       selectedIndex: 3,
     },
@@ -194,7 +194,7 @@ export default function Header(props) {
     },
     {
       name: 'Projects',
-      link: '/projects',
+      // link: '/projects',
       activeIndex: 1,
       ariaOwns: anchorEl ? 'simple-menu' : undefined,
       ariaPopup: anchorEl ? 'true' : undefined,
@@ -202,17 +202,17 @@ export default function Header(props) {
     },
     {
       name: 'Resume',
-      link: '/resume',
+      // link: '/resume',
       activeIndex: 2,
     },
     {
       name: 'About Me',
-      link: '/about',
+      // link: '/about',
       activeIndex: 3,
     },
     {
       name: 'Contact',
-      link: '/contact',
+      // link: '/contact',
       activeIndex: 4,
     },
   ];
@@ -231,9 +231,6 @@ export default function Header(props) {
               props.setSelectedIndex(route.selectedIndex);
             }
           }
-          break;
-        case '/estimate':
-          props.setValue(5);
           break;
         default:
           break;

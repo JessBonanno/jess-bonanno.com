@@ -95,7 +95,7 @@ export default function Footer(props) {
                     props.setValue(1);
                     props.setSelectedIndex(0);
                   }}
-                  to='/projects'
+                  // to='/projects'
                   item
                   className={classes.link}>
                   Projects
@@ -106,7 +106,7 @@ export default function Footer(props) {
                     props.setValue(1);
                     props.setSelectedIndex(1);
                   }}
-                  to='/planner'
+                  // to='/planner'
                   item
                   className={classes.link}>
                   Planner App
@@ -117,7 +117,7 @@ export default function Footer(props) {
                     props.setValue(1);
                     props.setSelectedIndex(2);
                   }}
-                  to='/isolation-recommendations'
+                  // to='/isolation-recommendations'
                   item
                   className={classes.link}>
                   Isolation Recommendations
@@ -128,7 +128,7 @@ export default function Footer(props) {
                     props.setValue(1);
                     props.setSelectedIndex(3);
                   }}
-                  to='/arc'
+                  // to='/arc'
                   item
                   className={classes.link}>
                   Arc Development
@@ -140,7 +140,7 @@ export default function Footer(props) {
                 <Grid
                   component={Link}
                   onClick={() => props.setValue(2)}
-                  to='/Resume'
+                  // to='/Resume'
                   item
                   className={classes.link}>
                   Resume
@@ -152,7 +152,7 @@ export default function Footer(props) {
                 <Grid
                   component={Link}
                   onClick={() => props.setValue(3)}
-                  to='/about'
+                  // to='/about'
                   item
                   className={classes.link}>
                   About Me
@@ -164,7 +164,7 @@ export default function Footer(props) {
                 <Grid
                   component={Link}
                   onClick={() => props.setValue(4)}
-                  to='/contact'
+                  // to='/contact'
                   item
                   className={classes.link}>
                   Contact
