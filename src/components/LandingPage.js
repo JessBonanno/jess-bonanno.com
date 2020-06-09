@@ -13,13 +13,13 @@ const useStyles = makeStyles({
     marginTop: '4em',
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
     width: '100%',
-    height: '100vh',
+    minHeight: '100vh',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
     [theme.breakpoints.down('sm')]: {
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${mobileLoveCode})`,
-      // backgroundPosition: 'center',
+      backgroundPosition: 'center',
     },
   },
 });
