@@ -9,6 +9,8 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import theme from './ui/Theme';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 
 import footerAdornment from '../assets/images/Footer Adornment.svg';
 
@@ -25,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
 
   name: {
     ...theme.typography.tab,
-    fontSize: '1.8rem',
+    fontSize: '1.6rem',
     color: theme.palette.common.paleGreen,
     [theme.breakpoints.down('xs')]: {
-        fontSize: '1rem',
+        fontSize: '1.2rem',
       },
   
   },
@@ -57,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
   },
   socialContainer: {
     backgroundColor: theme.palette.common.slate,
+    marginBottom: '1em',
     [theme.breakpoints.down('xs')]: {
       right: '0.6em',
     },
@@ -65,6 +68,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer(props) {
   const classes = useStyles();
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+
 
   return (
     <footer className={classes.footer}>
@@ -164,7 +169,7 @@ export default function Footer(props) {
                 <Grid
                   component={Link}
                   onClick={() => props.setValue(4)}
-                  // to='/contact'
+                  to='/contact'
                   item
                   className={classes.link}>
                   Contact
@@ -176,9 +181,7 @@ export default function Footer(props) {
         <Grid item className={classes.gridItem}>
           <Typography className={classes.name}>
             Jess Bonanno{' '}
-            <span style={{ fontSize: '1.2rem', marginLeft: '1em' }}>
-              a fullstack dev
-            </span>
+            <span style={{ fontSize: matchesSM ? '1rem' : '1.2rem', marginLeft: '1em' }}>a fullstack dev</span>
           </Typography>
         </Grid>
 
