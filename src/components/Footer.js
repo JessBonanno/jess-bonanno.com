@@ -179,7 +179,7 @@ export default function Footer(props) {
                 <Grid
                   component={Link}
                   onClick={() => props.setValue(4)}
-                  to='/contact'
+                  // to='/contact'
                   item
                   className={classes.link}>
                   Contact

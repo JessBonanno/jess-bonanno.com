@@ -6,6 +6,7 @@ import theme from './ui/Theme';
 import Header from './Header';
 import LandingPage from './LandingPage';
 import Footer from './Footer';
+import Resume from './Resume';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -26,6 +27,17 @@ function App() {
             path='/'
             render={(props) => (
               <LandingPage
+                {...props}
+                setSelectedIndex={setSelectedIndex}
+                setValue={setValue}
+              />
+            )}
+          />{' '}
+          <Route
+            exact
+            path='/resume'
+            render={(props) => (
+              <Resume
                 {...props}
                 setSelectedIndex={setSelectedIndex}
                 setValue={setValue}

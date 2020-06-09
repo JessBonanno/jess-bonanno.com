@@ -191,7 +191,7 @@ export default function Header(props) {
     },
     {
       name: 'Resume',
-      // link: '/resume',
+      link: '/resume',
       activeIndex: 2,
     },
     {

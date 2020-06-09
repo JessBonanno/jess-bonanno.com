@@ -1,6 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import { dark } from '@material-ui/core/styles/createPalette';
 
+const black = '#212121'
 const blue = '#004A80';
 const slate = '#2B2B2B';
 const lightBlue = '#00688E';
@@ -28,6 +29,7 @@ const poppinsFont = 'Poppins, sans-serif';
 export default createMuiTheme({
   palette: {
     common: {
+      black: black,
       blue: blue,
       lightBlue: lightBlue,
       paleGreen: paleGreen,
