@@ -10,7 +10,6 @@ import mobileLoveCode from '../assets/images/mobile-love-code.jpg';
 
 const useStyles = makeStyles({
   mainContainer: {
-    marginTop: '4em',
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
     width: '100%',
     minHeight: '100vh',
