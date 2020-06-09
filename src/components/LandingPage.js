@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     backgroundSize: 'cover',
     [theme.breakpoints.down('sm')]: {
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${mobileLoveCode})`,
-      backgroundPosition: 'center',
+      // backgroundPosition: 'center',
     },
   },
 });
