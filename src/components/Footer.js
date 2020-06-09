@@ -167,7 +167,7 @@ export default function Footer(props) {
                 <Grid
                   component={Link}
                   onClick={() => props.setValue(3)}
-                  // to='/about'
+                  to='/about'
                   item
                   className={classes.link}>
                   About Me

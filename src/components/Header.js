@@ -195,7 +195,7 @@ export default function Header(props) {
     },
     {
       name: 'About Me',
-      // link: '/about',
+      link: '/about',
       activeIndex: 3,
     },
     {
