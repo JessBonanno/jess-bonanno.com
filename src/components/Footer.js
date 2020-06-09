@@ -198,7 +198,7 @@ export default function Footer(props) {
           <Grid
             item
             component={'a'}
-            href='github.com/JessBonanno'
+            href='https://github.com/JessBonanno'
             rel='noopener noreferrer'
             target='_blank'>
             <IconButton>

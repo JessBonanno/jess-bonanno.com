@@ -117,7 +117,7 @@ export default function Projects(props) {
               color='secondary'
               className={classes.projectButton}
               component={Link}
-              to='/planner'
+            //   to='/planner'
               onClick={() => {
                 props.setValue(1);
                 props.setSelectedIndex(2);
@@ -167,7 +167,7 @@ export default function Projects(props) {
               color='secondary'
               className={classes.projectButton}
               component={Link}
-              to='/isolation'
+            //   to='/isolation'
               onClick={() => {
                 props.setValue(1);
                 props.setSelectedIndex(2);
@@ -218,7 +218,7 @@ export default function Projects(props) {
               color='secondary'
               className={classes.projectButton}
               component={Link}
-              to='/arc'
+            //   to='/arc'
               onClick={() => {
                 props.setValue(1);
                 props.setSelectedIndex(2);
