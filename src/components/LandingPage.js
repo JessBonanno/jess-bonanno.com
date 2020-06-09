@@ -17,9 +17,9 @@ const useStyles = makeStyles({
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
-    [theme.breakpoints.down('sm')]: {
-      backgroundPosition: 'center',
-    },
+    // [theme.breakpoints.down('sm')]: {
+    //   backgroundPosition: 'center',
+    // },
   },
 });
 export default function LandingPage() {
