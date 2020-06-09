@@ -6,16 +6,23 @@ import theme from './ui/Theme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import loveCode from '../assets/images/love-code.jpg';
+import codeMobile from '../assets/images/code-portrait.jpg';
 import mobileLoveCode from '../assets/images/mobile-love-code.jpg';
 
 const useStyles = makeStyles({
   mainContainer: {
+    marginTop: '4em',
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
     width: '100%',
-    minHeight: '100vh',
+    minHeight: '100vh%',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
+    [theme.breakpoints.down('sm')]: {
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${mobileLoveCode})`,
+      backgroundPosition: 'center',
+      minHeight: 800,
+    },
   },
 });
 export default function LandingPage() {
