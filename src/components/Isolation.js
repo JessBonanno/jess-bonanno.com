@@ -8,7 +8,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import Link from '@material-ui/core/Link'
+import Link from '@material-ui/core/Link';
 
 import isolation from '../assets/images/isolation.png';
 import isolationMobile from '../assets/images/isolation-mobile.png';
@@ -86,7 +86,7 @@ export default function Isolation(props) {
               style={{ backgroundColor: 'transparent' }}
               component={RouterLink}
               alt='back to planner app'
-                to="/planner"
+              to='/planner'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowBackIcon className={classes.arrow} />
             </IconButton>
@@ -94,17 +94,19 @@ export default function Isolation(props) {
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
           <Grid item>
-            <Typography variant='h3' align={matchesMD ? 'center' : undefined} style={{fontSize: matchesSM && '2.2rem'}}>
+            <Typography
+              variant='h3'
+              align={matchesMD ? 'center' : undefined}
+              style={{ fontSize: matchesSM && '2.2rem' }}>
               Isolation Recommendations
             </Typography>
             <Link
               href='https://github.com/JessBonanno/isolation-recommendations'
               color='secondary'
               rel='noopener noreferrer'
-              target='_blank' >
+              target='_blank'>
               Github
             </Link>
-
           </Grid>
           <Grid item>
             <Typography
@@ -117,19 +119,24 @@ export default function Isolation(props) {
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              This was a landing page I was tasked with making for a mini optional build week.  It was my first time building something without guidance.
+              This was a landing page I was tasked with making for a mini
+              optional build week. It was my first time building something
+              without guidance.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I was a bit nervous going into it but once I started coding I found a rhythm & lost track of the hours.
+              I was a bit nervous going into it but once I started coding I
+              found a rhythm & lost track of the hours.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I was proud by the end of this project to see how far I had come.  It was gratifying to look back at all I had learned and see it really come together.
+              I was proud by the end of this project to see how far I had come.
+              It was gratifying to look back at all I had learned and see it
+              really come together.
             </Typography>
           </Grid>
         </Grid>
@@ -139,7 +146,7 @@ export default function Isolation(props) {
               style={{ backgroundColor: 'transparent' }}
               component={RouterLink}
               alt='forward to arc development'
-                to="/arc"
+              to='/arc'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowForwardIcon className={classes.arrow} />
             </IconButton>
@@ -166,7 +173,6 @@ export default function Isolation(props) {
           alignItems='center'
           md>
           <Grid item style={{ margin: '2em' }}>
-            >
             <img
               src={isolation}
               alt='desktop isolation-recommendations'

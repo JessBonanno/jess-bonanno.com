@@ -8,7 +8,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import Link from '@material-ui/core/Link'
+import Link from '@material-ui/core/Link';
 
 import arc from '../assets/images/arc.png';
 import arcMobile from '../assets/images/arc-mobile.png';
@@ -104,10 +104,9 @@ export default function Isolation(props) {
               href='https://github.com/JessBonanno/Mui'
               color='secondary'
               rel='noopener noreferrer'
-              target='_blank' >
+              target='_blank'>
               Github
             </Link>
-
           </Grid>
           <Grid item>
             <Typography
@@ -120,19 +119,24 @@ export default function Isolation(props) {
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              Building this app really taught me a lot about styling components and using the Material-UI library to make fully responsive SPAs.
+              Building this app really taught me a lot about styling components
+              and using the Material-UI library to make fully responsive SPAs.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I took a course aside from my regular studies because I felt there was so much I still didn't know about frontend styling with react.  
+              I took a course aside from my regular studies because I felt there
+              was so much I still didn't know about frontend styling with react.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I was drawn to Material-UI from the minute I saw it and decided that this would be my library of choice for styling.  I knew I would have to master this in order to give my applications a professional look.
+              I was drawn to Material-UI from the minute I saw it and decided
+              that this would be my library of choice for styling. I knew I
+              would have to master this in order to give my applications a
+              professional look.
             </Typography>
           </Grid>
         </Grid>
@@ -169,7 +173,6 @@ export default function Isolation(props) {
           alignItems='center'
           md>
           <Grid item style={{ margin: '2em' }}>
-            >
             <img
               src={arc}
               alt='desktop isolation-recommendations'

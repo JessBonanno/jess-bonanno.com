@@ -102,7 +102,7 @@ export default function Planner(props) {
               href='https://github.com/Wunderlist-1'
               color='secondary'
               rel='noopener noreferrer'
-              target='_blank' >
+              target='_blank'>
               Github
             </Link>
           </Grid>
@@ -173,7 +173,6 @@ export default function Planner(props) {
           alignItems='center'
           md>
           <Grid item style={{ margin: '2em' }}>
-            >
             <img
               src={planner}
               alt='desktop planner'
