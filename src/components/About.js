@@ -5,8 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Hidden from '@material-ui/core/Hidden';
-import MenuBookTwoToneIcon from '@material-ui/icons/MenuBookTwoTone';
-
+import DesktopWindowsTwoToneIcon from '@material-ui/icons/DesktopWindowsTwoTone';
 import me from '../assets/images/me.jpg';
 import jetski from '../assets/images/jetski.jpg';
 import copper from '../assets/images/copper.jpg';
@@ -33,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '1em',
     },
   },
-  quote: {
+  headerContainer: {
     fontStyle: 'italic',
     fontWeight: 300,
     fontSize: '1.5rem',
@@ -43,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       marginBottom: '1em',
     },
-
   },
   rowContainer: {
     paddingLeft: '5em',
@@ -98,7 +96,10 @@ export default function About(props) {
         justify='center'
         className={classes.rowContainer}
         style={{ marginTop: '3em' }}>
-        <Typography variant='h4' align='center' className={classes.quote}>
+        <Typography
+          variant='h4'
+          align='center'
+          className={classes.headerContainer}>
           “when you don't create things, you become defined by your tastes
           rather than ability. your tastes only narrow & exclude people. so
           create.” ― Why The Lucky Stiff
@@ -125,7 +126,7 @@ export default function About(props) {
         <Typography
           variant='h4'
           align='center'
-          className={classes.quote}
+          className={classes.headerContainer}
           style={{ color: theme.palette.common.yellow }}>
           React | Node | Javascript | SQL | GIT | Express | Agile | HTML | CSS
         </Typography>
@@ -157,7 +158,7 @@ export default function About(props) {
             <Hidden lgUp>
               <Grid item>
                 <Grid item container justify='center' lg>
-                  <MenuBookTwoToneIcon className={classes.icon} />
+                  <DesktopWindowsTwoToneIcon className={classes.icon} />
                   {/* <img
                 // src={history}
                 alt="quill pen sitting on top of book"
@@ -213,7 +214,7 @@ export default function About(props) {
         <Hidden mdDown>
           <Grid item>
             <Grid item container justify='center' lg>
-              <MenuBookTwoToneIcon className={classes.icon} />
+              <DesktopWindowsTwoToneIcon className={classes.icon} />
               {/* <img
                 // src={history}
                 alt="quill pen sitting on top of book"
