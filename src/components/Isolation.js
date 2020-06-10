@@ -93,7 +93,7 @@ export default function Isolation(props) {
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
           <Grid item>
-            <Typography variant='h3' align={matchesMD ? 'center' : undefined}>
+            <Typography variant='h3' align={matchesMD ? 'center' : undefined} style={{fontSize: matchesSM && '2.2rem'}}>
               Isolation Recommendations
             </Typography>
           </Grid>

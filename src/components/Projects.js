@@ -163,7 +163,7 @@ export default function Projects(props) {
               color='secondary'
               className={classes.projectButton}
               component={Link}
-            //   to='/isolation'
+              to='/isolation-recommendations'
               onClick={() => {
                 props.setValue(1);
                 props.setSelectedIndex(2);
