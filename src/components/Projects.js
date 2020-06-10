@@ -17,10 +17,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '4em',
     backgroundColor: theme.palette.common.black,
     [theme.breakpoints.down('md')]: {
-        marginBottom: '10em',
+      marginBottom: '10em',
+    },
 
-      },
-  
     [theme.breakpoints.down('sm')]: {
       marginBottom: '5em',
     },
@@ -57,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '10em',
     [theme.breakpoints.down('sm')]: {
       padding: 25,
+      marginTop: '1em',
     },
   },
 }));
@@ -101,8 +101,8 @@ export default function Projects(props) {
               Get organized!
             </Typography>
             <Typography variant='subtitle1'>
-              A todo task manager I worked on for my first official school
-              build week.
+              A todo task manager I worked on for my first official school build
+              week.
               {<br />}I stepped in to finish the backend after we lost a
               developer {<br />}
               Even though it was 2 units ahead of where I was in the curriculum

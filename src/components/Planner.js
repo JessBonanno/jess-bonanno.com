@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
@@ -8,6 +8,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Link from '@material-ui/core/Link';
 
 import planner from '../assets/images/planner.png';
 import plannerThemes from '../assets/images/planner-themes.png';
@@ -84,9 +85,9 @@ export default function Planner(props) {
             style={{ marginRight: '1em', marginLeft: '-3.5em' }}>
             <IconButton
               style={{ backgroundColor: 'transparent' }}
-              component={Link}
+              component={RouterLink}
               alt='back to arc development'
-                to="/arc"
+              to='/arc'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowBackIcon className={classes.arrow} />
             </IconButton>
@@ -97,6 +98,13 @@ export default function Planner(props) {
             <Typography variant='h3' align={matchesMD ? 'center' : undefined}>
               Planner App
             </Typography>
+            <Link
+              href='https://github.com/Wunderlist-1'
+              color='secondary'
+              rel='noopener noreferrer'
+              target='_blank' >
+              Github
+            </Link>
           </Grid>
           <Grid item>
             <Typography
@@ -136,9 +144,9 @@ export default function Planner(props) {
           <Grid item className={classes.arrowContainer}>
             <IconButton
               style={{ backgroundColor: 'transparent' }}
-              component={Link}
+              component={RouterLink}
               alt='forward isolation recommendations'
-                to="/isolation-recommendations"
+              to='/isolation-recommendations'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowForwardIcon className={classes.arrow} />
             </IconButton>
@@ -155,11 +163,7 @@ export default function Planner(props) {
         </Hidden>{' '}
       </Grid>
       {/* shwocase block */}
-      <Grid
-        item
-        container
-        alignItems='center'
-        justify='space-between'>
+      <Grid item container alignItems='center' justify='space-between'>
         <Grid
           item
           container
@@ -178,10 +182,9 @@ export default function Planner(props) {
           </Grid>
           <Grid item style={{ margin: '2em' }}>
             <img
-            
               src={plannerThemes}
               alt='planner themes'
-              style={{ maxWidth: matchesSM ? '100%' : 700}}
+              style={{ maxWidth: matchesSM ? '100%' : 700 }}
             />
           </Grid>
         </Grid>

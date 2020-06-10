@@ -77,7 +77,7 @@ export default createMuiTheme({
     },
 
     h3: {
-      color: orange,
+      color: lightBlue,
       fontFamily: poppinsFont,
     },
     h4: {

@@ -96,6 +96,14 @@ export default function Isolation(props) {
             <Typography variant='h3' align={matchesMD ? 'center' : undefined} style={{fontSize: matchesSM && '2.2rem'}}>
               Isolation Recommendations
             </Typography>
+            <Link
+              href='https://github.com/JessBonanno/isolation-recommendations'
+              color='secondary'
+              rel='noopener noreferrer'
+              target='_blank' >
+              Github
+            </Link>
+
           </Grid>
           <Grid item>
             <Typography
