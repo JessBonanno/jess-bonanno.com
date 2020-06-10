@@ -49,8 +49,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   myPic: {
-    height: '25em',
-    width: '25em',
+    height: '20em',
+    width: '20em',
     [theme.breakpoints.down('sm')]: {
       height: '20em',
       width: '20em',
@@ -104,7 +104,7 @@ export default function About(props) {
         </Grid>
         <Grid item>
           <Typography variant='body1' paragraph align='center'>
-            A fullstack dev
+            A Fullstack Developer
           </Typography>
         </Grid>
         <Grid item>
