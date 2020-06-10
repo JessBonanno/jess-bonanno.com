@@ -244,21 +244,25 @@ export default function About(props) {
           <Hidden lgUp>
             <Grid item lg style={{ maxWidth: '45em', padding: '1.25em' }}>
               <Typography variant='body1' align='center' paragraph>
-                Hey, I'm Jess. I'm based out of NJ.
+                Hey, I'm Jess. I'm currently based out of NJ.
               </Typography>
-            </Grid>
 
-            <Grid item lg style={{ maxWidth: '45em', padding: '1.25em' }}>
               <Typography variant='body1' align='center' paragraph>
                 I have always been passionate about all things tech & extremely
-                driven to figure out how and why things work. I enjoy learning
-                new things and putting them to use. I thrive on solving
-                challenging problems. Working with technology suits me well as
-                it is constantly evolving and there is always something new to
-                master. I am skilled in HTML, CSS, Javascript, React.js,
-                Express, Node.js, and SQL. I look forward to expanding this
-                stack to meet the demands of any problems I work to solve in the
-                future.
+                driven to figure out how and why things work.
+              </Typography>
+              <Typography variant='body1' align='center' paragraph>
+                I enjoy learning new things and putting them to use. I thrive on
+                solving challenging problems.
+              </Typography>
+              <Typography variant='body1' align='center' paragraph>
+                Working with technology suits me well as it is constantly
+                evolving and there is always something new to master.
+              </Typography>
+              <Typography variant='body1' align='center' paragraph>
+                I am skilled in HTML, CSS, Javascript, React.js, Express,
+                Node.js, and SQL. I look forward to expanding this stack to meet
+                the demands of any problems I work to solve in the future.
               </Typography>
             </Grid>
           </Hidden>
