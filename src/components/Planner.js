@@ -86,7 +86,7 @@ export default function Planner(props) {
               style={{ backgroundColor: 'transparent' }}
               component={Link}
               alt='back to arc development'
-              //   to="/isolation"
+                // to="/arc"
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowBackIcon className={classes.arrow} />
             </IconButton>
@@ -138,7 +138,7 @@ export default function Planner(props) {
               style={{ backgroundColor: 'transparent' }}
               component={Link}
               alt='forward isolation recommendations'
-              //   to="/isolation"
+                to="/isolation-recommendations"
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowForwardIcon className={classes.arrow} />
             </IconButton>

@@ -85,7 +85,7 @@ export default function Isolation(props) {
               style={{ backgroundColor: 'transparent' }}
               component={Link}
               alt='back to planner app'
-              //   to="/isolation"
+                to="/planner"
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowBackIcon className={classes.arrow} />
             </IconButton>
@@ -120,7 +120,7 @@ export default function Isolation(props) {
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I was proud by the end of this project to see how far I had really come.  It was gratifying to look back at all I had learned and see it really come together.
+              I was proud by the end of this project to see how far I had come.  It was gratifying to look back at all I had learned and see it really come together.
             </Typography>
           </Grid>
         </Grid>
