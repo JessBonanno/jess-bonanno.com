@@ -121,7 +121,7 @@ export default function Footer(props) {
                     props.setValue(1);
                     props.setSelectedIndex(1);
                   }}
-                  // to='/planner'
+                  to='/planner'
                   item
                   className={classes.link}>
                   Planner App

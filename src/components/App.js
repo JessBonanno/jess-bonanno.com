@@ -9,6 +9,7 @@ import Footer from './Footer';
 import Resume from './Resume';
 import Projects from './Projects';
 import About from './About';
+import Planner from './Planner';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -46,9 +47,9 @@ function App() {
               />
             )}
           />
-                    <Route
+          <Route
             exact
-            path="/projects"
+            path='/projects'
             render={(props) => (
               <Projects
                 {...props}
@@ -57,9 +58,20 @@ function App() {
               />
             )}
           />
-                    <Route
+          <Route
             exact
-            path="/about"
+            path='/planner'
+            render={(props) => (
+              <Planner
+                {...props}
+                setSelectedIndex={setSelectedIndex}
+                setValue={setValue}
+              />
+            )}
+          />
+          <Route
+            exact
+            path='/about'
             render={(props) => (
               <About
                 {...props}
@@ -68,8 +80,6 @@ function App() {
               />
             )}
           />
-
-
           <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
         </Router>
       </ThemeProvider>

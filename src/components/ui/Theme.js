@@ -76,12 +76,15 @@ export default createMuiTheme({
       fontFamily: poppinsFont,
     },
 
-    h3: {},
+    h3: {
+      color: orange,
+      fontFamily: poppinsFont,
+    },
     h4: {
       color: lightBlue,
     },
     subtitle1: {
-      color: lightBlue,
+      color: paleGreen,
     },
     subtitle2: {},
     body1: {

@@ -42,10 +42,6 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '2em',
     },
   },
-  specialText: {
-    fontFamily: 'Pacifico',
-    color: theme.palette.common.orange,
-  },
   subtitle: {
     marginBottom: '1em',
   },
@@ -57,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 0,
     },
   },
-  serviceContainer: {
+  projectContainer: {
     marginTop: '10em',
     [theme.breakpoints.down('sm')]: {
       padding: 25,
@@ -92,7 +88,7 @@ export default function Projects(props) {
           container
           direction='row'
           justify={matchesSM ? 'center' : 'flex-end'}
-          className={classes.serviceContainer}
+          className={classes.projectContainer}
           style={{ marginTop: matchesSM ? '1em' : '5em' }}>
           <Grid
             item
@@ -105,7 +101,7 @@ export default function Projects(props) {
               Get organized!
             </Typography>
             <Typography variant='subtitle1'>
-              An todo task manager I worked on for my first official school
+              A todo task manager I worked on for my first official school
               build week.
               {<br />}I stepped in to finish the backend after we lost a
               developer {<br />}
@@ -117,7 +113,7 @@ export default function Projects(props) {
               color='secondary'
               className={classes.projectButton}
               component={Link}
-            //   to='/planner'
+              to='/planner'
               onClick={() => {
                 props.setValue(1);
                 props.setSelectedIndex(2);
@@ -145,7 +141,7 @@ export default function Projects(props) {
           container
           direction='row'
           justify={matchesSM ? 'center' : undefined}
-          className={classes.serviceContainer}>
+          className={classes.projectContainer}>
           <Grid
             item
             style={{
@@ -195,7 +191,7 @@ export default function Projects(props) {
           container
           direction='row'
           justify={matchesSM ? 'center' : 'flex-end'}
-          className={classes.serviceContainer}
+          className={classes.projectContainer}
           style={{ marginBottom: '10em' }}>
           <Grid
             item

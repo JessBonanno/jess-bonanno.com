@@ -156,7 +156,7 @@ export default function Header(props) {
     },
     {
       name: 'Planner App',
-      // link: '/planner',
+      link: '/planner',
       activeIndex: 1,
       selectedIndex: 1,
     },
