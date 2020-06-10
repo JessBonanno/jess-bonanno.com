@@ -143,7 +143,7 @@ export default function Footer(props) {
                     props.setValue(1);
                     props.setSelectedIndex(3);
                   }}
-                  // to='/arc'
+                  to='/arc'
                   item
                   className={classes.link}>
                   Arc Development

@@ -129,8 +129,8 @@ export default function Isolation(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={Link}
-              alt='forward arc development'
-              //   to="/isolation"
+              alt='forward to arc development'
+                to="/arc"
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowForwardIcon className={classes.arrow} />
             </IconButton>

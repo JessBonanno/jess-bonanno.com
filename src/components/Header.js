@@ -168,7 +168,7 @@ export default function Header(props) {
     },
     {
       name: 'Arc Development',
-      // link: '/arc',
+      link: '/arc',
       activeIndex: 1,
       selectedIndex: 3,
     },

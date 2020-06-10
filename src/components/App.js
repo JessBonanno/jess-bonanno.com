@@ -11,6 +11,7 @@ import Projects from './Projects';
 import About from './About';
 import Planner from './Planner';
 import Isolation from './Isolation';
+import Arc from './Arc';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -70,7 +71,7 @@ function App() {
               />
             )}
           />
-                    <Route
+          <Route
             exact
             path='/isolation-recommendations'
             render={(props) => (
@@ -81,7 +82,17 @@ function App() {
               />
             )}
           />
-
+          <Route
+            exact
+            path='/arc'
+            render={(props) => (
+              <Arc
+                {...props}
+                setSelectedIndex={setSelectedIndex}
+                setValue={setValue}
+              />
+            )}
+          />
           <Route
             exact
             path='/about'

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles as Arc, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
@@ -9,12 +9,11 @@ import Hidden from '@material-ui/core/Hidden';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
-import planner from '../assets/images/planner.png';
-import plannerThemes from '../assets/images/planner-themes.png';
-import plannerMobile from '../assets/images/planner-mobile.png';
+import arc from '../assets/images/arc.png';
+import arcMobile from '../assets/images/arc-mobile.png';
 
-const useStyles = makeStyles((theme) => ({
-  plannerContainer: {
+const useStyles = Arc((theme) => ({
+  arcContainer: {
     margin: '4em 0 20em',
     backgroundColor: theme.palette.common.black,
     width: '100%',
@@ -59,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Planner(props) {
+export default function Isolation(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesLG = useMediaQuery(theme.breakpoints.down('lg'));
@@ -68,7 +67,7 @@ export default function Planner(props) {
   const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
-    <Grid container direction='column' className={classes.plannerContainer}>
+    <Grid container direction='column' className={classes.arcContainer}>
       {/* title block */}
       <Grid
         item
@@ -85,8 +84,8 @@ export default function Planner(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={Link}
-              alt='back to arc development'
-                to="/arc"
+              alt='back to isolation-recommendations'
+              to='/isolation-recommendations'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowBackIcon className={classes.arrow} />
             </IconButton>
@@ -94,8 +93,11 @@ export default function Planner(props) {
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
           <Grid item>
-            <Typography variant='h3' align={matchesMD ? 'center' : undefined}>
-              Planner App
+            <Typography
+              variant='h3'
+              align={matchesMD ? 'center' : undefined}
+              style={{ fontSize: matchesSM && '2.2rem' }}>
+              Arc Development
             </Typography>
           </Grid>
           <Grid item>
@@ -103,32 +105,25 @@ export default function Planner(props) {
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              This app was a lot of fun to make.
+              My game changer.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I went into this build week as an intro to React student. I was
-              tasked with creating forms for the app as well as getting data
-              from an API and displaying it.
+              Building this app really taught me a lot about styling components and using the Material-UI library to make fully responsive SPAs.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I went above and beyond what was asked and built out an entire
-              user interface using React and Material-UI. I also added a feature
-              that allows users to chose a theme for their dashboard.
+              I took a course aside from my regular studies because I felt there was so much I still didn't know about frontend styling with react.  
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              When the end of build week was almost upon us we lost our backend
-              developer. I put in a lot of work at that point and I wanted the
-              app to have functionality so I tackled finishing up the backend
-              and was successful.
+              I was drawn to Material-UI from the minute I saw it and decided that this would be my library of choice for styling.  I knew I would have to master this in order to give my applications a professional look.
             </Typography>
           </Grid>
         </Grid>
@@ -137,8 +132,8 @@ export default function Planner(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={Link}
-              alt='forward isolation recommendations'
-                to="/isolation-recommendations"
+              alt='forward to planner app'
+              to='/planner'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowForwardIcon className={classes.arrow} />
             </IconButton>
@@ -147,19 +142,15 @@ export default function Planner(props) {
         <Hidden mdDown>
           <Grid item>
             <img
-              src={plannerMobile}
-              alt='mobile planner'
+              src={arcMobile}
+              alt='mobile isolation'
               style={{ maxHeight: matchesSM ? 200 : 400 }}
             />
           </Grid>
         </Hidden>{' '}
       </Grid>
       {/* shwocase block */}
-      <Grid
-        item
-        container
-        alignItems='center'
-        justify='space-between'>
+      <Grid item container alignItems='center' justify='space-between'>
         <Grid
           item
           container
@@ -171,17 +162,9 @@ export default function Planner(props) {
           <Grid item style={{ margin: '2em' }}>
             >
             <img
-              src={planner}
-              alt='desktop planner'
+              src={arc}
+              alt='desktop isolation-recommendations'
               style={{ maxWidth: matchesSM ? '100%' : 700 }}
-            />
-          </Grid>
-          <Grid item style={{ margin: '2em' }}>
-            <img
-            
-              src={plannerThemes}
-              alt='planner themes'
-              style={{ maxWidth: matchesSM ? '100%' : 700}}
             />
           </Grid>
         </Grid>
@@ -195,8 +178,8 @@ export default function Planner(props) {
             md>
             <Grid item>
               <img
-                src={plannerMobile}
-                alt='mobile planner'
+                src={arcMobile}
+                alt='mobile isolation-recommendations'
                 style={{ maxHeight: matchesXS ? 200 : 400 }}
               />
             </Grid>
