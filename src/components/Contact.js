@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -8,7 +8,9 @@ import TextField from '@material-ui/core/TextField';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PhoneIphoneTwoToneIcon from '@material-ui/icons/PhoneIphoneTwoTone';
 import EmailTwoToneIcon from '@material-ui/icons/EmailTwoTone';
-import Hidden from '@material-ui/core/Hidden'
+import Hidden from '@material-ui/core/Hidden';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
 
 import loveCode from '../assets/images/love-code.jpg';
 import mobileLoveCode from '../assets/images/mobile-love-code.jpg';
@@ -16,7 +18,7 @@ import ButtonArrow from './ButtonArrow';
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
-    margin: '4em 0 15em',
+    margin: '4em 0 10em',
     backgroundColor: theme.palette.common.black,
     width: '100%',
     minHeight: '100vh',
@@ -29,7 +31,23 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '7em',
     },
   },
+  dialog: {
+    marginTop: '7em',
+    backgroundColor: theme.palette.common.black,
+    padding: '1em 7em',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0 1em',
+    },
 
+    [theme.breakpoints.down('xs')]: {
+      width: '95%',
+      padding: '0 1em',
+      margin: 0,
+    },
+  },
+  dialogContent: {
+    backgroundColor: theme.palette.common.black,
+  },
   background: {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
     backgroundPosition: 'center',
@@ -51,8 +69,11 @@ const useStyles = makeStyles((theme) => ({
   },
   message: {
     border: `2px solid ${theme.palette.common.yellow}`,
-    marginTop: '5em',
+    marginTop: '1em',
     borderRadius: 5,
+  },
+  disabledButton: {
+    backgroundColor: theme.palette.common.gray,
   },
 }));
 
@@ -68,6 +89,11 @@ export default function Contact(props) {
   const [phone, setPhone] = useState('');
   const [phoneHelper, setPhoneHelper] = useState('');
   const [message, setMessage] = useState('');
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [open]);
 
   const onChange = (e) => {
     let valid;
@@ -102,50 +128,49 @@ export default function Contact(props) {
   return (
     <Grid container direction='row' className={classes.contactContainer}>
       {/* image block */}
-<Hidden mdDown>
+      <Hidden mdDown>
+        <Grid
+          item
+          container
+          direction={matchesMD ? 'column' : 'row'}
+          alignItems='center'
+          justify='center'
+          className={classes.background}
+          lg={8}
+          xl={9}>
           <Grid
             item
-            container
-            direction={matchesMD ? 'column' : 'row'}
-            alignItems='center'
-            justify='center'
-            className={classes.background}
-            lg={8}
-            xl={9}>
-            <Grid
-              item
-              style={{ marginLeft: matchesMD ? 0 : '3em' }}
-              textAlign='center'>
-              <Grid container direction='column'>
-                <Grid item>
-                  <Typography
-                    variant='h5'
-                    align='center'
-                    style={{ fontSize: matchesSM && '5rem' }}>
-                    Collaborate <br></br> Develop <br></br> Design
-                  </Typography>
-                  <Typography
-                    variant='subtitle2'
-                    style={{ fontSize: matchesSM && '7rem' }}
-                    align='center'>
-                    Create
-                  </Typography>
-                </Grid>
+            style={{ marginLeft: matchesMD ? 0 : '3em' }}
+            textAlign='center'>
+            <Grid container direction='column'>
+              <Grid item>
+                <Typography
+                  variant='h5'
+                  align='center'
+                  style={{ fontSize: matchesSM && '5rem' }}>
+                  Collaborate <br></br> Develop <br></br> Design
+                </Typography>
+                <Typography
+                  variant='subtitle2'
+                  style={{ fontSize: matchesSM && '7rem' }}
+                  align='center'>
+                  Create
+                </Typography>
               </Grid>
             </Grid>
           </Grid>
-
-</Hidden>
+        </Grid>
+      </Hidden>
       <Grid
         style={{
           marginBottom: 0,
-          marginTop: matchesSM ? '4em' : matchesMD ? '5em' : 0,
+          marginTop: '3em',
         }}
         item
         container
         direction='column'
         alignItems='center'
-        justify='center'
+        // justify='center'
         lg={4}
         xl={3}>
         <Grid item>
@@ -187,7 +212,7 @@ export default function Contact(props) {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid item container style={{ marginBottom: '2em' }}>
+            <Grid item container>
               <Grid item>
                 <EmailTwoToneIcon
                   alt='envelope'
@@ -266,23 +291,21 @@ export default function Contact(props) {
               justify='center'
               style={{ marginTop: '2em', marginBottom: '7em' }}>
               <Button
+                // disabled={
+                //   name.length === 0 ||
+                //   message.length === 0 ||
+                //   phoneHelper.length !== 0 ||
+                //   emailHelper.length !== 0
+                // }
+                classes={{ disabled: classes.disabledButton }}
                 variant='outlined'
                 color='secondary'
                 className={classes.projectButton}
                 component={Link}
                 // to='/'
-                onClick={() => {
-                  props.setValue(1);
-                  props.setSelectedIndex(2);
-                }}>
+                onClick={() => setOpen(true)}>
                 <span style={{ marginRight: 10 }}>Send Message</span>
                 <ButtonArrow
-                  disabled={
-                    name.length === 0 ||
-                    message.length === 0 ||
-                    phoneHelper.length !== 0 ||
-                    emailHelper.length !== 0
-                  }
                   width={15}
                   height={15}
                   fill={theme.palette.common.yellow}
@@ -292,41 +315,135 @@ export default function Contact(props) {
           </Grid>
         </Grid>
       </Grid>
-      <Hidden lgUp>
+      <Dialog
+      style={{zIndex: 1302}}
+        classes={{ paper: classes.dialog }}
+        open={open}
+        onClose={() => setOpen(false)}>
+        <DialogContent align='center' className={classes.dialogContent}>
+          <Grid container direction='column'>
+            <Grid item>
+              <Typography variant='h4' gutterBottom>
+                Confirm Message
+              </Typography>
+            </Grid>
+            <Grid item style={{ marginBottom: '.5em' }}>
+              <TextField
+                fullWidth
+                label='Name'
+                id='name'
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </Grid>
+            <Grid item style={{ marginBottom: '.5em' }}>
+              <TextField
+                error={emailHelper.length !== 0}
+                helperText={emailHelper}
+                fullWidth
+                label='Email'
+                id='email'
+                value={email}
+                onChange={onChange}
+              />
+            </Grid>
+            <Grid item style={{ marginBottom: '.5em' }}>
+              <TextField
+                error={phoneHelper.length !== 0}
+                helperText={phoneHelper}
+                fullWidth
+                label='Phone'
+                id='phone'
+                value={phone}
+                onChange={onChange}
+              />
+            </Grid>
+          </Grid>
+          <Grid item style={{ maxWidth: '20em' }}>
+            <TextField
+              fullWidth
+              InputProps={{ disableUnderline: true }}
+              className={classes.message}
+              multiline
+              rows={10}
+              value={message}
+              id='message'
+              onChange={(e) => setMessage(e.target.value)}
+            />
+          </Grid>
           <Grid
             item
             container
-            direction={matchesMD ? 'column' : 'row'}
+            style={{ margin: '1em 0' }}
             alignItems='center'
-            justify='center'
-            className={classes.background}
-            lg={8}
-            xl={9}>
-            <Grid
-              item
-              style={{ marginLeft: matchesMD ? 0 : '3em' }}
-              textAlign='center'>
-              <Grid container direction='column'>
-                <Grid item>
-                  <Typography
-                    variant='h5'
-                    align='center'
-                    style={{ fontSize: matchesSM && '5rem' }}>
-                    Collaborate <br></br> Develop <br></br> Design
-                  </Typography>
-                  <Typography
-                    variant='subtitle2'
-                    style={{ fontSize: matchesSM && '7rem' }}
-                    align='center'>
-                    Create
-                  </Typography>
-                </Grid>
+            justify='space-between'>
+            <Grid item>
+              <Button
+                style={{ fontSize: '.8rem' }}
+                color='secondary'
+                onClick={() => setOpen(false)}>
+                Cancel
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button
+                // disabled={
+                //   name.length === 0 ||
+                //   message.length === 0 ||
+                //   phoneHelper.length !== 0 ||
+                //   emailHelper.length !== 0
+                // }
+                classes={{ disabled: classes.disabledButton }}
+                variant='outlined'
+                color='secondary'
+                className={classes.projectButton}
+                component={Link}
+                // to='/'
+                onClick={() => setOpen(true)}>
+                <span style={{ marginRight: 10 }}>Send Message</span>
+                <ButtonArrow
+                  width={15}
+                  height={15}
+                  fill={theme.palette.common.yellow}
+                />
+              </Button>
+            </Grid>
+          </Grid>
+        </DialogContent>
+      </Dialog>
+      <Hidden lgUp>
+        <Grid
+          item
+          container
+          direction={matchesMD ? 'column' : 'row'}
+          alignItems='center'
+          justify='center'
+          className={classes.background}
+          lg={8}
+          xl={9}>
+          <Grid
+            item
+            style={{ marginLeft: matchesMD ? 0 : '3em' }}
+            textAlign='center'>
+            <Grid container direction='column'>
+              <Grid item>
+                <Typography
+                  variant='h5'
+                  align='center'
+                  style={{ fontSize: matchesSM && '5rem' }}>
+                  Collaborate <br></br> Develop <br></br> Design
+                </Typography>
+                <Typography
+                  variant='subtitle2'
+                  style={{ fontSize: matchesSM && '7rem' }}
+                  align='center'>
+                  Create
+                </Typography>
               </Grid>
             </Grid>
           </Grid>
-
-</Hidden>
-
+        </Grid>
+      </Hidden>
     </Grid>
   );
 }

@@ -6,7 +6,6 @@ const blue = '#004A80';
 const slate = '#2B2B2B';
 const lightBlue = '#00688E';
 const white = '#EBEBEB';
-const rust = '#8C403A';
 const darkBlue = '#0A2A40';
 const yellow = '#FBD85A';
 const orange = '#FF2635';
@@ -36,8 +35,6 @@ export default createMuiTheme({
       slate: slate,
       gray: gray,
       white: white,
-      rust: rust,
-      darkBlue: darkBlue,
       yellow: yellow,
     },
     primary: {
@@ -94,8 +91,6 @@ export default createMuiTheme({
       color: yellow,
       fontSize: '8rem',
       fontFamily: nanumFont,
-
-
     },
     body1: {
       fontSize: '1.2rem',
@@ -109,25 +104,26 @@ export default createMuiTheme({
   overrides: {
     MuiInputLabel: {
       color: paleGreen,
+
       root: {
         color: paleGreen,
-        fontSize: "1rem",
-        "&$focused": { // increase the specificity for the pseudo class
+        fontSize: '1rem',
+        '&$focused': {
+          // increase the specificity for the pseudo class
           color: paleGreen,
-        }
+        },
       },
     },
     MuiInput: {
-      
       root: {
         color: paleGreen,
         fontWeight: 300,
       },
       underline: {
-        "&:before": {
+        '&:before': {
           borderBottom: `2px solid ${yellow}`,
         },
-        "&:hover:not($disabled):not($focused):not($error):before": {
+        '&:hover:not($disabled):not($focused):not($error):before': {
           borderBottom: `2px solid ${yellow}`,
         },
       },

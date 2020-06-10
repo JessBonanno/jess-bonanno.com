@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { makeStyles as Arc, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -66,6 +66,10 @@ export default function Isolation(props) {
   const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
   const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Grid container direction='column' className={classes.arcContainer}>
