@@ -102,8 +102,8 @@ export default function Contact(props) {
     <Grid container direction='row' className={classes.contactContainer}>
       <Grid
         style={{
-          marginBottom: matchesMD ? '5em' : 0,
-          marginTop: matchesSM ? '1em' : matchesMD ? '5em' : 0,
+          marginBottom: 0,
+          marginTop: matchesSM ? '4em' : matchesMD ? '5em' : 0,
         }}
         item
         container
@@ -269,14 +269,15 @@ export default function Contact(props) {
         <Grid
           item
           style={{ marginLeft: matchesMD ? 0 : '3em' }}
-          textAlign={matchesMD ? 'center' : 'inherit'}>
+          textAlign='center'>
           <Grid container direction='column'>
             <Grid item>
-              <Typography variant='h5' align='center'>
+              <Typography variant='h5' align='center' style={{fontSize: matchesSM && '5rem'}}>
               Collaborate <br></br> Develop <br></br> Design
               </Typography>
               <Typography
                 variant='subtitle2'
+                style={{fontSize: matchesSM && '7rem'}}
                 align='center'>
                 Create
               </Typography>
