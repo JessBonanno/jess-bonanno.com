@@ -8,6 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PhoneIphoneTwoToneIcon from '@material-ui/icons/PhoneIphoneTwoTone';
 import EmailTwoToneIcon from '@material-ui/icons/EmailTwoTone';
+import Hidden from '@material-ui/core/Hidden'
 
 import loveCode from '../assets/images/love-code.jpg';
 import mobileLoveCode from '../assets/images/mobile-love-code.jpg';
@@ -100,6 +101,41 @@ export default function Contact(props) {
 
   return (
     <Grid container direction='row' className={classes.contactContainer}>
+      {/* image block */}
+<Hidden mdDown>
+          <Grid
+            item
+            container
+            direction={matchesMD ? 'column' : 'row'}
+            alignItems='center'
+            justify='center'
+            className={classes.background}
+            lg={8}
+            xl={9}>
+            <Grid
+              item
+              style={{ marginLeft: matchesMD ? 0 : '3em' }}
+              textAlign='center'>
+              <Grid container direction='column'>
+                <Grid item>
+                  <Typography
+                    variant='h5'
+                    align='center'
+                    style={{ fontSize: matchesSM && '5rem' }}>
+                    Collaborate <br></br> Develop <br></br> Design
+                  </Typography>
+                  <Typography
+                    variant='subtitle2'
+                    style={{ fontSize: matchesSM && '7rem' }}
+                    align='center'>
+                    Create
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+
+</Hidden>
       <Grid
         style={{
           marginBottom: 0,
@@ -256,35 +292,41 @@ export default function Contact(props) {
           </Grid>
         </Grid>
       </Grid>
-      {/* image block */}
-      <Grid
-        item
-        container
-        direction={matchesMD ? 'column' : 'row'}
-        alignItems='center'
-        justify='center'
-        className={classes.background}
-        lg={8}
-        xl={9}>
-        <Grid
-          item
-          style={{ marginLeft: matchesMD ? 0 : '3em' }}
-          textAlign='center'>
-          <Grid container direction='column'>
-            <Grid item>
-              <Typography variant='h5' align='center' style={{fontSize: matchesSM && '5rem'}}>
-              Collaborate <br></br> Develop <br></br> Design
-              </Typography>
-              <Typography
-                variant='subtitle2'
-                style={{fontSize: matchesSM && '7rem'}}
-                align='center'>
-                Create
-              </Typography>
+      <Hidden lgUp>
+          <Grid
+            item
+            container
+            direction={matchesMD ? 'column' : 'row'}
+            alignItems='center'
+            justify='center'
+            className={classes.background}
+            lg={8}
+            xl={9}>
+            <Grid
+              item
+              style={{ marginLeft: matchesMD ? 0 : '3em' }}
+              textAlign='center'>
+              <Grid container direction='column'>
+                <Grid item>
+                  <Typography
+                    variant='h5'
+                    align='center'
+                    style={{ fontSize: matchesSM && '5rem' }}>
+                    Collaborate <br></br> Develop <br></br> Design
+                  </Typography>
+                  <Typography
+                    variant='subtitle2'
+                    style={{ fontSize: matchesSM && '7rem' }}
+                    align='center'>
+                    Create
+                  </Typography>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Grid>
+
+</Hidden>
+
     </Grid>
   );
 }
