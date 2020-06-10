@@ -12,6 +12,7 @@ import About from './About';
 import Planner from './Planner';
 import Isolation from './Isolation';
 import Arc from './Arc';
+import Contact from './Contact';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -98,6 +99,17 @@ function App() {
             path='/about'
             render={(props) => (
               <About
+                {...props}
+                setSelectedIndex={setSelectedIndex}
+                setValue={setValue}
+              />
+            )}
+          />
+          <Route
+            exact
+            path='/contact'
+            render={(props) => (
+              <Contact
                 {...props}
                 setSelectedIndex={setSelectedIndex}
                 setValue={setValue}

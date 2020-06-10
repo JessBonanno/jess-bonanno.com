@@ -1,7 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import { dark } from '@material-ui/core/styles/createPalette';
 
-const black = '#212121'
+const black = '#212121';
 const blue = '#004A80';
 const slate = '#2B2B2B';
 const lightBlue = '#00688E';
@@ -66,7 +66,6 @@ export default createMuiTheme({
       textAlign: 'center',
       color: orange,
       fontFamily: bebasFont,
-       
     },
     h2: {
       fontSize: '5.6rem',
@@ -97,14 +96,44 @@ export default createMuiTheme({
     },
   },
   overrides: {
-    MuiInputLabel: {
-      root: {},
-    },
-    MuiInput: {
-      root: {},
-      underline: {
-        '&:before': {},
-        '&:hover:not($disabled):not($focused):not($error):before': {},
+    MuiFormLabel: {
+      border: yellow,
+      root: {
+        border: yellow,
+
+        '&$focused': {
+          border: yellow,
+
+          color: paleGreen,
+        },
+      },
+      MuiInputLabel: {
+        border: yellow,
+
+        root: {
+          border: yellow,
+
+        },
+      },
+      MuiInput: {
+        border: yellow,
+
+        root: {
+          border: yellow,
+
+        },
+        underline: {
+          color: yellow,
+
+          '&:before': {
+            color: yellow,
+
+          },
+          '&:hover:not($disabled):not($focused):not($error):before': {
+            color: yellow,
+
+          },
+        },
       },
     },
   },
