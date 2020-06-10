@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '20rem',
     [theme.breakpoints.down('xs')]: {
       marginLeft: 0,
+      fontSize: '12rem'
     },
   },
 
