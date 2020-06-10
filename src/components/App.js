@@ -10,6 +10,7 @@ import Resume from './Resume';
 import Projects from './Projects';
 import About from './About';
 import Planner from './Planner';
+import Isolation from './Isolation';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -69,6 +70,18 @@ function App() {
               />
             )}
           />
+                    <Route
+            exact
+            path='/isolation-recommendations'
+            render={(props) => (
+              <Isolation
+                {...props}
+                setSelectedIndex={setSelectedIndex}
+                setValue={setValue}
+              />
+            )}
+          />
+
           <Route
             exact
             path='/about'

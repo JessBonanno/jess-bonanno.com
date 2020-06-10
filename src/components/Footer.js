@@ -132,7 +132,7 @@ export default function Footer(props) {
                     props.setValue(1);
                     props.setSelectedIndex(2);
                   }}
-                  // to='/isolation-recommendations'
+                  to='/isolation-recommendations'
                   item
                   className={classes.link}>
                   Isolation Recommendations

@@ -162,7 +162,7 @@ export default function Header(props) {
     },
     {
       name: 'Isolation Recommendations',
-      // link: '/isolation-recommendations',
+      link: '/isolation-recommendations',
       activeIndex: 1,
       selectedIndex: 2,
     },
