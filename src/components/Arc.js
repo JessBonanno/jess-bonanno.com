@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { makeStyles as Arc, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
@@ -8,6 +8,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Link from '@material-ui/core/Link'
 
 import arc from '../assets/images/arc.png';
 import arcMobile from '../assets/images/arc-mobile.png';
@@ -83,7 +84,7 @@ export default function Isolation(props) {
             style={{ marginRight: '1em', marginLeft: '-3.5em' }}>
             <IconButton
               style={{ backgroundColor: 'transparent' }}
-              component={Link}
+              component={RouterLink}
               alt='back to isolation-recommendations'
               to='/isolation-recommendations'
               onClick={() => props.setSelectedIndex(2)}>
@@ -139,7 +140,7 @@ export default function Isolation(props) {
           <Grid item className={classes.arrowContainer}>
             <IconButton
               style={{ backgroundColor: 'transparent' }}
-              component={Link}
+              component={RouterLink}
               alt='forward to planner app'
               to='/planner'
               onClick={() => props.setSelectedIndex(2)}>
