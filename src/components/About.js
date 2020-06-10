@@ -39,7 +39,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.5rem',
     maxWidth: '50em',
     lineHeight: 1.4,
-    marginBottom: '5em',
+    marginBottom: '2em',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '1em',
+    },
+
   },
   rowContainer: {
     paddingLeft: '5em',
