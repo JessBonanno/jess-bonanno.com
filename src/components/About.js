@@ -134,7 +134,7 @@ export default function About(props) {
         direction={matchesMD ? 'column' : 'row'}
         alignItems={matchesMD ? 'center' : undefined}
         justify='space-around'
-        style={{ marginTop: matchesMD ? 0 : '5em', marginBottom: '10em' }}>
+        style={{ marginTop: matchesMD ? 0 : '5em', marginBottom: '5em' }}>
         <Grid item>
           <Grid
             item
