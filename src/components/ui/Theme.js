@@ -82,10 +82,21 @@ export default createMuiTheme({
     h4: {
       color: lightBlue,
     },
+    h5: {
+      color: orange,
+      fontSize: '6rem',
+      fontFamily: bebasFont,
+    },
     subtitle1: {
       color: paleGreen,
     },
-    subtitle2: {},
+    subtitle2: {
+      color: yellow,
+      fontSize: '8rem',
+      fontFamily: shadowsFont,
+
+
+    },
     body1: {
       fontSize: '1.2rem',
       color: paleGreen,
@@ -96,43 +107,28 @@ export default createMuiTheme({
     },
   },
   overrides: {
-    MuiFormLabel: {
-      border: yellow,
+    MuiInputLabel: {
+      color: paleGreen,
       root: {
-        border: yellow,
-
-        '&$focused': {
-          border: yellow,
-
+        color: paleGreen,
+        fontSize: "1rem",
+        "&$focused": { // increase the specificity for the pseudo class
           color: paleGreen,
-        },
+        }
       },
-      MuiInputLabel: {
-        border: yellow,
-
-        root: {
-          border: yellow,
-
-        },
+    },
+    MuiInput: {
+      
+      root: {
+        color: paleGreen,
+        fontWeight: 300,
       },
-      MuiInput: {
-        border: yellow,
-
-        root: {
-          border: yellow,
-
+      underline: {
+        "&:before": {
+          borderBottom: `2px solid ${yellow}`,
         },
-        underline: {
-          color: yellow,
-
-          '&:before': {
-            color: yellow,
-
-          },
-          '&:hover:not($disabled):not($focused):not($error):before': {
-            color: yellow,
-
-          },
+        "&:hover:not($disabled):not($focused):not($error):before": {
+          borderBottom: `2px solid ${yellow}`,
         },
       },
     },

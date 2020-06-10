@@ -30,14 +30,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   background: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${loveCode})`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     height: '60em',
     paddingBottom: '10em',
     [theme.breakpoints.down('md')]: {
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${mobileLoveCode})`,
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${mobileLoveCode})`,
     },
   },
   icon: {
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   message: {
-    border: `2px solid ${theme.palette.common.lightBlue}`,
+    border: `2px solid ${theme.palette.common.yellow}`,
     marginTop: '5em',
     borderRadius: 5,
   },
@@ -234,7 +234,7 @@ export default function Contact(props) {
                 color='secondary'
                 className={classes.projectButton}
                 component={Link}
-                to='/planner'
+                // to='/'
                 onClick={() => {
                   props.setValue(1);
                   props.setSelectedIndex(2);
@@ -262,7 +262,7 @@ export default function Contact(props) {
         container
         direction={matchesMD ? 'column' : 'row'}
         alignItems='center'
-        justify={matchesMD ? 'center' : undefined}
+        justify='center'
         className={classes.background}
         lg={8}
         xl={9}>
@@ -272,43 +272,16 @@ export default function Contact(props) {
           textAlign={matchesMD ? 'center' : 'inherit'}>
           <Grid container direction='column'>
             <Grid item>
-              <Typography variant='h2' align={matchesMD ? 'center' : undefined}>
-                Simple Software.
-                <br /> Revolutionary Results.
+              <Typography variant='h5' align='center'>
+              Collaborate <br></br> Develop <br></br> Design
               </Typography>
               <Typography
                 variant='subtitle2'
-                style={{ fontSize: '1.5rem' }}
-                align={matchesMD ? 'center' : undefined}>
-                Take advantage of the 21st century.
+                align='center'>
+                Create
               </Typography>
-              <Grid item container justify={matchesMD ? 'center' : undefined}>
-                <Button
-                  variant='outlined'
-                  className={classes.learnButton}
-                  component={Link}
-                  to='revolution'
-                  onClick={() => props.setValue(2)}>
-                  <span style={{ marginRight: 5 }}>Learn More</span>
-                  <ButtonArrow
-                    width={10}
-                    height={10}
-                    fill={theme.palette.common.yellow}
-                  />
-                </Button>
-              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid item>
-          <Button
-            variant='contained'
-            className={classes.estimateButton}
-            component={Link}
-            to='estimate'
-            onClick={() => props.setValue(5)}>
-            Free Estimate
-          </Button>
         </Grid>
       </Grid>
     </Grid>
