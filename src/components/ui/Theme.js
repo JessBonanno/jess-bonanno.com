@@ -93,7 +93,7 @@ export default createMuiTheme({
     subtitle2: {
       color: yellow,
       fontSize: '8rem',
-      fontFamily: shadowsFont,
+      fontFamily: nanumFont,
 
 
     },
