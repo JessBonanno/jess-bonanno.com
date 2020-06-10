@@ -100,13 +100,15 @@ export default function Isolation(props) {
               style={{ fontSize: matchesSM && '2.2rem' }}>
               Arc Development
             </Typography>
-            <Link
-              href='https://github.com/JessBonanno/Mui'
-              color='secondary'
-              rel='noopener noreferrer'
-              target='_blank'>
-              Github
-            </Link>
+            <Grid item>
+              <Link
+                href='https://github.com/JessBonanno/Mui'
+                color='secondary'
+                rel='noopener noreferrer'
+                target='_blank'>
+                Github
+              </Link>
+            </Grid>
           </Grid>
           <Grid item>
             <Typography
