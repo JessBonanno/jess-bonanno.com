@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -96,7 +96,11 @@ export default function Isolation(props) {
           </Grid>
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
-          <Grid item>
+          <Grid
+            item
+            container
+            alignItems={matchesMD ? 'center' : 'center'}
+            direction={matchesMD ? 'column' : 'row'}>
             <Typography
               variant='h4'
               align={matchesMD ? 'center' : undefined}
@@ -104,6 +108,7 @@ export default function Isolation(props) {
               Isolation Recommendations
             </Typography>
             <Link
+              style={{ marginLeft: matchesMD ? 0 : '1em' }}
               href='https://github.com/JessBonanno/isolation-recommendations'
               color='secondary'
               rel='noopener noreferrer'
@@ -111,35 +116,68 @@ export default function Isolation(props) {
               Github
             </Link>
           </Grid>
+          <Grid
+            item
+            container
+            direction='column'
+            alignItems={matchesMD ? 'center' : 'flex-start'}>
+            <Typography variant='h6'>Stack Used</Typography>
+
+            <Typography
+              variant='body2'
+              align='center'
+              className={classes.stack}
+              style={{
+                color: theme.palette.common.yellow,
+                fontSize: '1em',
+                marginBottom: '1em',
+              }}>
+              React | Javascript | Material-UI
+            </Typography>
+          </Grid>
+
           <Grid item>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              My first "real" project.
+              My first team project.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              This was a landing page I was tasked with making for a mini
-              optional build week. It was my first time building something
-              without guidance.
+              For this project, I was tasked with creating a landing page for a
+              music suggesting application using HTML and CSS. This was the
+              first time I was empowered to create something without a mockup.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I was a bit nervous going into it but once I started coding I
-              found a rhythm & lost track of the hours.
+              Since the Covid-19 pandemic had just begun and everyone was
+              ordered to stay home I came up with the idea for Isolation
+              Recommendations. I feel this added to the project by incorporating
+              real-world issues for increased relatability with potential
+              consumers.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I was proud by the end of this project to see how far I had come.
-              It was gratifying to look back at all I had learned and see it
-              really come together.
+              This was a great project to get my feet wet with. It was my
+              introduction to the world of team development. I was able to meet
+              my goals and went even further by using React and Material-UI to
+              create a slideshow.
+            </Typography>
+            <Typography
+              variant='body1'
+              align={matchesMD ? 'center' : undefined}
+              paragraph>
+              The biggest obstacle I faced for this was that we were only given
+              half the normal amount of time to complete the project. I was
+              confident enough in the concepts I had learned to meet the
+              deadline with more than the minimum viable product.
             </Typography>
           </Grid>
         </Grid>

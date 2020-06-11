@@ -80,6 +80,10 @@ export default createMuiTheme({
       fontSize: '6rem',
       fontFamily: bebasFont,
     },
+    h6: {
+      fontSize: '1.6rem',
+      color: lightBlue,
+    },
     subtitle1: {
       color: paleGreen,
       fontFamily: hindFont,

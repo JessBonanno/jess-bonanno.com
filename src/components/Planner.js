@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -97,11 +97,16 @@ export default function Planner(props) {
           </Grid>
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
-          <Grid item>
+          <Grid
+            item
+            container
+            alignItems={matchesMD ? 'center' : 'center'}
+            direction={matchesMD ? 'column' : 'row'}>
             <Typography variant='h4' align={matchesMD ? 'center' : undefined}>
               Planner App
             </Typography>
             <Link
+              style={{ marginLeft: matchesMD ? 0 : '1em' }}
               href='https://github.com/Wunderlist-1'
               color='secondary'
               rel='noopener noreferrer'
@@ -109,6 +114,26 @@ export default function Planner(props) {
               Github
             </Link>
           </Grid>
+          <Grid
+            item
+            container
+            direction='column'
+            alignItems={matchesMD ? 'center' : 'flex-start'}>
+            <Typography variant='h6'>Stack Used</Typography>
+
+            <Typography
+              variant='body2'
+              align='center'
+              className={classes.stack}
+              style={{
+                color: theme.palette.common.yellow,
+                fontSize: '1em',
+                marginBottom: '1em',
+              }}>
+              React | Javascript | Material-UI | SQL | Node | Express | Git
+            </Typography>
+          </Grid>
+
           <Grid item>
             <Typography
               variant='body1'
@@ -129,17 +154,21 @@ export default function Planner(props) {
               align={matchesMD ? 'center' : undefined}
               paragraph>
               I went above and beyond what was asked and built out an entire
-              user interface using React and Material-UI. I also added a feature
-              that allows users to chose a theme for their dashboard.
+              user interface using React and Material-UI. I also added an extra
+              feature that allows users to choose a theme for their dashboard
+              for better user experience.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              When the end of build week was almost upon us we lost our backend
-              developer. I put in a lot of work at that point and I wanted the
-              app to have functionality so I tackled finishing up the backend
-              and was successful.
+              The biggest obstacle I had to overcome was when the end of build
+              week was almost upon us and we lost our backend developer. I
+              tackled finishing up the backend with only 2 days left. I was able
+              to build out a data structure to handle the adding of user to-do
+              lists by creating the tables to store the data with Knex as well
+              as implementing the REST API endpoints with response and error
+              handling.
             </Typography>
           </Grid>
         </Grid>

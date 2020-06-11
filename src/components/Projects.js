@@ -105,7 +105,7 @@ export default function Projects(props) {
               Get organized!
             </Typography>
             <Typography variant='subtitle1'>
-              A todo task manager I worked on for my first official school build
+              A to-do task manager I worked on for my first official school build
               week.
               {<br />}I stepped in to finish the backend after we lost a
               developer {<br />}

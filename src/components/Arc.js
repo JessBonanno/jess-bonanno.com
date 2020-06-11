@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { makeStyles as Arc, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -96,21 +96,43 @@ export default function Isolation(props) {
           </Grid>
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
-          <Grid item>
+          <Grid
+            item
+            container
+            alignItems={matchesMD ? 'center' : 'center'}
+            direction={matchesMD ? 'column' : 'row'}>
             <Typography
               variant='h4'
               align={matchesMD ? 'center' : undefined}
               style={{ fontSize: matchesSM && '2.2rem' }}>
               Arc Development
             </Typography>
-            <Grid item>
-              <Link
-                href='https://github.com/JessBonanno/Mui'
-                color='secondary'
-                rel='noopener noreferrer'
-                target='_blank'>
-                Github
-              </Link>
+            <Link
+              style={{ marginLeft: matchesMD ? 0 : '1em' }}
+              href='https://github.com/JessBonanno/Mui'
+              color='secondary'
+              rel='noopener noreferrer'
+              target='_blank'>
+              Github
+            </Link>
+            <Grid
+              item
+              container
+              direction='column'
+              alignItems={matchesMD ? 'center' : 'flex-start'}>
+              <Typography variant='h6'>Stack Used</Typography>
+
+              <Typography
+                variant='body2'
+                align='center'
+                className={classes.stack}
+                style={{
+                  color: theme.palette.common.yellow,
+                  fontSize: '1em',
+                  marginBottom: '1em',
+                }}>
+                React | Javascript | Material-UI | Node | Firebase | Nodemailer
+              </Typography>
             </Grid>
           </Grid>
           <Grid item>
@@ -118,30 +140,45 @@ export default function Isolation(props) {
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              My game changer.
+              My game-changer.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              Building this app really taught me a lot about styling components
-              and using the Material-UI library to make fully responsive SPAs.
+              I decided to take a supplemental course aside from my regular
+              studies to sharpen my design skills. I was drawn to Material-UI
+              from the minute I saw it and decided that this would be my library
+              of choice for styling. I knew I would have to master this if I
+              wanted to give my applications a professional look and feel.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I took a course aside from my regular studies because I felt there
-              was so much I still didn't know about frontend styling with react.
+              Building this app taught me a lot about styling components and
+              using Material-UI to make fully responsive SPAs. I was able to use
+              almost every component available in their library. This gave me a
+              solid foundation to expand upon in future projects.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I was drawn to Material-UI from the minute I saw it and decided
-              that this would be my library of choice for styling. I knew I
-              would have to master this in order to give my applications a
-              professional look.
+              Using the Grid component throughout the app I gained gain a deep
+              understanding of how to create perfectly aligned layouts. Using
+              the custom theme system I learned how to properly colors fonts and
+              more to create consistency across the entire site.
+            </Typography>
+
+            <Typography
+              variant='body1'
+              align={matchesMD ? 'center' : undefined}
+              paragraph>
+              This helped me to overcome the challenge of working with
+              styled-components. It was a lot of work to go through this course
+              while also being a student but I feel it was well worth it
+              considering all that was gained.
             </Typography>
           </Grid>
         </Grid>
