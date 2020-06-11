@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     margin: '4em 0 15em',
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
     width: '100%',
-    minHeight: '100vh',
+    minHeight: 1000,
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
