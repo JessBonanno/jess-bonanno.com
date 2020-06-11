@@ -34,7 +34,7 @@ const useStyles = makeStyles({
       fontSize: '4rem',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '2.5rem',
+      fontSize: '3rem',
     },
   },
 });
@@ -54,7 +54,7 @@ export default function LandingPage() {
         <Typography
           className={classes.headline}
           variant='h1'
-          style={{ marginTop: matchesMD ? '3em' : '1em' }}>
+          style={{ marginTop: matchesMD ? '2em' : '1em' }}>
           When you love what you do
         </Typography>
         <Typography
