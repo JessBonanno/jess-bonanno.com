@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     bottom: 0,
     width: '100%',
+    [theme.breakpoints.down('sm')]: {
+      minHeight: 250,
+    },
   },
 
   name: {
@@ -27,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Shadows Into Light Two, cursive',
     fontSize: '2rem',
     color: theme.palette.common.paleGreen,
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '2rem',
+    },
+
     [theme.breakpoints.down('xs')]: {
       fontSize: '1.2rem',
     },

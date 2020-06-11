@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     [theme.breakpoints.down('sm')]: {
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
       backgroundPosition: 'center',
-      // minHeight: 1000,
+      minHeight: 1200,
       marginBottom: 0,
     },
   },
