@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
-import theme from './ui/Theme';
 import Link from '@material-ui/core/Link';
 
 import resume from '../assets/images/Resume.jpg';
@@ -56,13 +55,11 @@ const useStyles = makeStyles((theme) => ({
   resumeLink: {
     margin: '3em 0 3em',
     fontSize: '1.5em',
-    [theme.breakpoints.down('md')]: {
-      },
-      [theme.breakpoints.down('xs')]: {
-          fontSize: '1.2em',
-          marginTop: '7em'
-      },
-  
+    [theme.breakpoints.down('md')]: {},
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.2em',
+      marginTop: '7em',
+    },
   },
 }));
 
@@ -77,6 +74,7 @@ export default function Resume() {
       <Grid item className={classes.resumeItem} align='center'>
         <Grid item className={classes.resumeLink}>
           <Link
+            style={{ fontFamily: 'Lexend Giga, sans-serif' }}
             href='https://docs.google.com/document/d/1cyUOxqR2nS66zWMthlm-MTF0pX7Iub5-mI33sInXvLo/edit?usp=sharing'
             color='secondary'>
             View Document

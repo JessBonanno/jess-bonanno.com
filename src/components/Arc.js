@@ -62,7 +62,6 @@ const useStyles = Arc((theme) => ({
 export default function Isolation(props) {
   const classes = useStyles();
   const theme = useTheme();
-  const matchesLG = useMediaQuery(theme.breakpoints.down('lg'));
   const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
   const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
@@ -99,7 +98,7 @@ export default function Isolation(props) {
         <Grid item container direction='column' className={classes.heading}>
           <Grid item>
             <Typography
-              variant='h3'
+              variant='h4'
               align={matchesMD ? 'center' : undefined}
               style={{ fontSize: matchesSM && '2.2rem' }}>
               Arc Development
@@ -168,7 +167,7 @@ export default function Isolation(props) {
           </Grid>
         </Hidden>{' '}
       </Grid>
-      {/* shwocase block */}
+      {/* showcase block */}
       <Grid item container alignItems='center' justify='space-between'>
         <Grid
           item

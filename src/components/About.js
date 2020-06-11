@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   aboutTitle: {
-    fontSize: '2em',
+    fontSize: '2.5em',
     textAlign: 'center',
     [theme.breakpoints.down('md')]: {
       marginTop: '1em',
@@ -41,6 +41,15 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '2em',
     [theme.breakpoints.down('md')]: {
       marginBottom: '1em',
+    },
+    stack: {
+      fontWeight: 300,
+      maxWidth: '50em',
+      lineHeight: 1.4,
+      marginBottom: '2em',
+      [theme.breakpoints.down('md')]: {
+        marginBottom: '1em',
+      },
     },
   },
   rowContainer: {
@@ -57,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '20rem',
     [theme.breakpoints.down('xs')]: {
       marginLeft: 0,
-      fontSize: '12rem'
+      fontSize: '12rem',
     },
   },
 
@@ -102,7 +111,7 @@ export default function About(props) {
         className={classes.rowContainer}
         style={{ marginTop: '3em' }}>
         <Typography
-          variant='h4'
+          variant='body2'
           align='center'
           className={classes.headerContainer}>
           “when you don't create things, you become defined by your tastes
@@ -116,7 +125,7 @@ export default function About(props) {
         style={{ marginTop: matchesMD ? '1em' : '2em' }}>
         <Typography
           align={matchesMD ? 'center' : undefined}
-          variant='h2'
+          variant='h4'
           className={classes.aboutTitle}
           style={{ color: theme.palette.common.lightBlue }}>
           My Stack
@@ -129,9 +138,9 @@ export default function About(props) {
         className={classes.rowContainer}
         style={{ marginTop: '3em' }}>
         <Typography
-          variant='h4'
+          variant='body2'
           align='center'
-          className={classes.headerContainer}
+          className={classes.stack}
           style={{ color: theme.palette.common.yellow }}>
           React | Node | Javascript | SQL | GIT | Express | Agile | HTML | CSS
         </Typography>

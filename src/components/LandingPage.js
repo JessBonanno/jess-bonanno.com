@@ -6,7 +6,6 @@ import theme from './ui/Theme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import loveCode from '../assets/images/love-code.jpg';
-import codeMobile from '../assets/images/code-portrait.jpg';
 import mobileLoveCode from '../assets/images/mobile-love-code.jpg';
 
 const useStyles = makeStyles({

@@ -1,12 +1,10 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import { dark } from '@material-ui/core/styles/createPalette';
 
 const black = '#212121';
 const blue = '#004A80';
 const slate = '#2B2B2B';
 const lightBlue = '#00688E';
 const white = '#EBEBEB';
-const darkBlue = '#0A2A40';
 const yellow = '#FBD85A';
 const orange = '#FF2635';
 const gray = '#8C8C8C';
@@ -14,16 +12,13 @@ const paleGreen = '#B0D9BD';
 
 const bebasFont = 'Bebas Neue, sans-serif';
 const nanumFont = 'Nanum Brush Script, cursive';
-const shadowsFont = 'Shadows Into Light Two, cursive';
 const comfortaaFont = 'Comfortaa, cursive';
 const exoFont = 'Exo, sans-serif';
 const hindFont = 'Hind Vadodara, sans-serif';
-const inconsolataFont = 'Inconsolata, monospace';
 const inriaFont = 'Inria Sans, sans-serif';
 const lexendFont = 'Lexend Giga, sans-serif';
 const merriweatherFont = 'Merriweather Sans, sans-serif';
 const overpassFont = 'Overpass, sans-serif';
-const poppinsFont = 'Poppins, sans-serif';
 
 export default createMuiTheme({
   palette: {
@@ -66,18 +61,19 @@ export default createMuiTheme({
     },
     h2: {
       fontSize: '5.6rem',
-      lineHeight: 1.2,
+      lineHeight: 1.4,
       textAlign: 'center',
       color: orange,
-      fontFamily: poppinsFont,
+      fontFamily: exoFont,
     },
 
     h3: {
       color: lightBlue,
-      fontFamily: poppinsFont,
+      fontFamily: merriweatherFont,
     },
     h4: {
       color: lightBlue,
+      fontFamily: comfortaaFont,
     },
     h5: {
       color: orange,
@@ -86,6 +82,8 @@ export default createMuiTheme({
     },
     subtitle1: {
       color: paleGreen,
+      fontFamily: hindFont,
+      fontSize: '1.2rem'
     },
     subtitle2: {
       color: yellow,
@@ -95,6 +93,13 @@ export default createMuiTheme({
     body1: {
       fontSize: '1.2rem',
       color: paleGreen,
+      fontFamily: inriaFont,
+    },
+    body2: {
+      fontSize: '1.4rem',
+      color: lightBlue,
+      fontFamily: overpassFont,
+
     },
     caption: {
       fontSize: '.9rem',

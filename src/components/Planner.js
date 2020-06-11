@@ -63,7 +63,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Planner(props) {
   const classes = useStyles();
   const theme = useTheme();
-  const matchesLG = useMediaQuery(theme.breakpoints.down('lg'));
   const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
   const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
@@ -99,7 +98,7 @@ export default function Planner(props) {
         </Hidden>
         <Grid item container direction='column' className={classes.heading}>
           <Grid item>
-            <Typography variant='h3' align={matchesMD ? 'center' : undefined}>
+            <Typography variant='h4' align={matchesMD ? 'center' : undefined}>
               Planner App
             </Typography>
             <Link

@@ -373,7 +373,7 @@ export default function Contact(props) {
         <DialogContent align='center' className={classes.dialogContent}>
           <Grid container direction='column'>
             <Grid item>
-              <Typography variant='h4' gutterBottom>
+              <Typography style={{fontSize: '2.3rem'}} variant='h3' gutterBottom>
                 Confirm Message
               </Typography>
             </Grid>
