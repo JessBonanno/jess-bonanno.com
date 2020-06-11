@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     [theme.breakpoints.down('sm')]: {
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
       backgroundPosition: 'center',
-      minHeight: 1000,
+      // minHeight: 1000,
       marginBottom: 0,
     },
   },
@@ -50,7 +50,7 @@ export default function LandingPage() {
 
   return (
     <Grid container justify='center' className={classes.mainContainer}>
-      <Grid item>
+      <Grid item style={{marginTop: matchesSM ? '5em' : '10em'}}>
         <Typography
           className={classes.headline}
           variant='h1'
