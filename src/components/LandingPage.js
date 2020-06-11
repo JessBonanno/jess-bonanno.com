@@ -22,7 +22,7 @@ const useStyles = makeStyles({
       backgroundPosition: 'center',
     },
     [theme.breakpoints.down('xs')]: {
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${mobileLoveCode})`,
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
       backgroundPosition: 'center',
       minHeight: 800,
       marginBottom: 0,
