@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -11,6 +12,8 @@ import EmailTwoToneIcon from '@material-ui/icons/EmailTwoTone';
 import Hidden from '@material-ui/core/Hidden';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Snackbar from '@material-ui/core/Snackbar';
 
 import loveCode from '../assets/images/love-code.jpg';
 import mobileLoveCode from '../assets/images/mobile-love-code.jpg';
@@ -75,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
   disabledButton: {
     backgroundColor: theme.palette.common.gray,
   },
+  projectButton: {
+    width: 174,
+  },
 }));
 
 export default function Contact(props) {
@@ -90,6 +96,12 @@ export default function Contact(props) {
   const [phoneHelper, setPhoneHelper] = useState('');
   const [message, setMessage] = useState('');
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [alert, setAlert] = useState({
+    open: false,
+    message: '',
+    backgroundColor: '',
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -124,6 +136,49 @@ export default function Contact(props) {
         break;
     }
   };
+
+  const onConfirm = (e) => {
+    setLoading(true);
+    axios
+      .get('https://us-central1-portfolio-fd769.cloudfunctions.net/sendMail', {
+        params: {
+          name: name,
+          email: email,
+          phone: phone,
+          message: message,
+        },
+      })
+      .then((res) => {
+        setLoading(false);
+        setOpen(false);
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+        setAlert({
+          open: true,
+          message: 'Message Sent!',
+          backgroundColor: '#4BB543',
+        });
+      })
+      .catch((err) => {
+        setLoading(false);
+        setOpen(false);
+        setLoading(false);
+        setAlert({
+          open: true,
+          message: 'Something went wrong please try again!',
+          backgroundColor: '#FF3232',
+        });
+      });
+  };
+
+  const ButtonContents = (
+    <>
+      <span style={{ marginRight: 10 }}>Send Message</span>
+      <ButtonArrow width={15} height={15} fill={theme.palette.common.yellow} />
+    </>
+  );
 
   return (
     <Grid container direction='row' className={classes.contactContainer}>
@@ -291,12 +346,12 @@ export default function Contact(props) {
               justify='center'
               style={{ marginTop: '2em', marginBottom: '7em' }}>
               <Button
-                // disabled={
-                //   name.length === 0 ||
-                //   message.length === 0 ||
-                //   phoneHelper.length !== 0 ||
-                //   emailHelper.length !== 0
-                // }
+                disabled={
+                  name.length === 0 ||
+                  message.length === 0 ||
+                  phoneHelper.length !== 0 ||
+                  emailHelper.length !== 0
+                }
                 classes={{ disabled: classes.disabledButton }}
                 variant='outlined'
                 color='secondary'
@@ -304,19 +359,14 @@ export default function Contact(props) {
                 component={Link}
                 // to='/'
                 onClick={() => setOpen(true)}>
-                <span style={{ marginRight: 10 }}>Send Message</span>
-                <ButtonArrow
-                  width={15}
-                  height={15}
-                  fill={theme.palette.common.yellow}
-                />
+                {ButtonContents}
               </Button>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
       <Dialog
-      style={{zIndex: 1302}}
+        style={{ zIndex: 1302 }}
         classes={{ paper: classes.dialog }}
         open={open}
         onClose={() => setOpen(false)}>
@@ -387,30 +437,37 @@ export default function Contact(props) {
             </Grid>
             <Grid item>
               <Button
-                // disabled={
-                //   name.length === 0 ||
-                //   message.length === 0 ||
-                //   phoneHelper.length !== 0 ||
-                //   emailHelper.length !== 0
-                // }
+                disabled={
+                  name.length === 0 ||
+                  message.length === 0 ||
+                  phoneHelper.length !== 0 ||
+                  emailHelper.length !== 0
+                }
                 classes={{ disabled: classes.disabledButton }}
                 variant='outlined'
                 color='secondary'
                 className={classes.projectButton}
                 component={Link}
                 // to='/'
-                onClick={() => setOpen(true)}>
-                <span style={{ marginRight: 10 }}>Send Message</span>
-                <ButtonArrow
-                  width={15}
-                  height={15}
-                  fill={theme.palette.common.yellow}
-                />
+                onClick={onConfirm}>
+                {loading ? (
+                  <CircularProgress color='secondary' size={25} />
+                ) : (
+                  ButtonContents
+                )}
               </Button>
             </Grid>
           </Grid>
         </DialogContent>
       </Dialog>
+      <Snackbar
+        open={alert.open}
+        message={alert.message}
+        ContentProps={{ style: { backgroundColor: alert.backgroundColor } }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        onClose={() => setAlert({ ...alert, open: false })}
+        autoHideDuration={4000}
+      />
       <Hidden lgUp>
         <Grid
           item

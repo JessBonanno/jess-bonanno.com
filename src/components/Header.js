@@ -200,7 +200,7 @@ export default function Header(props) {
     },
     {
       name: 'Contact',
-      // link: '/contact',
+      link: '/contact',
       activeIndex: 4,
     },
   ];
