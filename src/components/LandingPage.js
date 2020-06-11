@@ -21,10 +21,10 @@ const useStyles = makeStyles({
       marginBottom: '10em',
       backgroundPosition: 'center',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${loveCode})`,
       backgroundPosition: 'center',
-      minHeight: 800,
+      minHeight: 1000,
       marginBottom: 0,
     },
   },
