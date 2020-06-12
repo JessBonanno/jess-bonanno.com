@@ -22,10 +22,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   resumeItem: {
-    margin: '2em 0 15em',
+    margin: '2em 0 20em',
     [theme.breakpoints.down('md')]: {
       width: '90%',
-      margin: '2em 0',
+      margin: '2em 0 10em',
     },
 
     [theme.breakpoints.down('xs')]: {
