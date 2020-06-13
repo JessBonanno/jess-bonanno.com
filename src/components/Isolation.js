@@ -12,7 +12,6 @@ import Link from '@material-ui/core/Link';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import FolderIcon from '@material-ui/icons/Folder';
 import ListItemText from '@material-ui/core/ListItemText';
 import DoneAllTwoToneIcon from '@material-ui/icons/DoneAllTwoTone';
 
@@ -315,7 +314,10 @@ export default function Isolation(props) {
               <img
                 src={isolationMobile}
                 alt='mobile isolation-recommendations'
-                style={{ maxHeight: matchesXS ? 200 : 400 }}
+                style={{
+                  maxHeight: matchesXS ? 200 : 400,
+                  marginBottom: matchesSM && '7em',
+                }}
               />
             </Grid>
           </Grid>{' '}
