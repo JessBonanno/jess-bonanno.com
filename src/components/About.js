@@ -218,9 +218,9 @@ export default function About(props) {
                 align={matchesMD ? 'center' : undefined}
                 variant='body1'
                 paragraph>
-                After product launch I remain vigilant to ensure everything is
+                After the product launch, I remain vigilant to ensure everything is
                 kept up to date with the latest technologies. My products won't
-                fall behind in this fast paced industry.
+                fall behind in this fast paced-industry.
               </Typography>
             </Grid>
           </Grid>
