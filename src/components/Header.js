@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawer: {
     backgroundColor: theme.palette.common.slate,
-    marginTop: '4em',
+    marginTop: '4.5em',
     minWidth: 250,
     opacity: 0.9,
     [theme.breakpoints.down('sm')]: {
