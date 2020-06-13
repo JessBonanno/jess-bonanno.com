@@ -9,6 +9,12 @@ import Hidden from '@material-ui/core/Hidden';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Link from '@material-ui/core/Link';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import FolderIcon from '@material-ui/icons/Folder';
+import ListItemText from '@material-ui/core/ListItemText';
+import DoneAllTwoToneIcon from '@material-ui/icons/DoneAllTwoTone';
 
 import isolation from '../assets/images/isolation.png';
 import isolationMobile from '../assets/images/isolation-mobile.png';
@@ -56,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
       margin: '1em 1em',
       width: '100%',
     },
+  },
+  listText: {
+    fontSize: '1rem',
   },
 }));
 
@@ -134,6 +143,79 @@ export default function Isolation(props) {
               }}>
               React | Javascript | Material-UI
             </Typography>
+          </Grid>
+          <Grid
+            item
+            container
+            justify={matchesMD ? 'center' : 'flex-start'}
+            style={{ margin: '1em 0 2em' }}>
+            <Grid item>
+              <Grid item>
+                <List dense style={{ padding: 0 }}>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                      <DoneAllTwoToneIcon
+                        style={{
+                          fontSize: '1rem',
+                          marginBottom: '.3em',
+                          width: 50,
+                          color: theme.palette.common.yellow,
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      classes={{ primary: classes.listText }}
+                      primary='Built a fully responsive landing page using React and Material-UI.
+
+    '
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
+              <Grid item>
+                <List dense style={{ padding: 0 }}>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                      <DoneAllTwoToneIcon
+                        style={{
+                          fontSize: '1rem',
+                          marginBottom: '.3em',
+                          width: 50,
+                          color: theme.palette.common.yellow,
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      classes={{ primary: classes.listText }}
+                      primary='Incorporated a slideshow to showcase features.
+                      '
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
+
+              <Grid item>
+                <List dense style={{ padding: 0 }}>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                      <DoneAllTwoToneIcon
+                        style={{
+                          fontSize: '1rem',
+                          marginBottom: '.3em',
+                          width: 50,
+                          color: theme.palette.common.yellow,
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      classes={{ primary: classes.listText }}
+                      primary='Worked effectively on a team of developers.
+                     .'
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
+            </Grid>
           </Grid>
 
           <Grid item>
