@@ -64,10 +64,10 @@ const useStyles = makeStyles(theme => ({
   icon: {
     // marginLeft: '2em',
     color: theme.palette.common.yellow,
-    fontSize: '20rem',
+    fontSize: '18rem',
     [theme.breakpoints.down('xs')]: {
       marginLeft: 0,
-      fontSize: '12rem',
+      fontSize: '10rem',
     },
   },
   quoteContainer: {
@@ -80,7 +80,6 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       marginBottom: '1em',
     },
-
   },
 
   myPic: {
@@ -245,7 +244,7 @@ export default function About(props) {
         direction='column'
         className={classes.rowContainer}
         alignItems='center'
-        style={{ marginBottom: '15em' }}>
+        style={{ marginBottom: '15em', marginTop: matchesMD ? '1em' : '2em' }}>
         <Grid item>
           <Typography variant='h4' align='center'>
             Jess Bonanno
