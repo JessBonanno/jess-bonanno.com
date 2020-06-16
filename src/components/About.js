@@ -10,7 +10,7 @@ import me from '../assets/images/me.jpg';
 import jetski from '../assets/images/jetski.jpg';
 import copper from '../assets/images/copper.jpg';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   aboutContainer: {
     margin: '4em 0 15em',
     backgroundColor: theme.palette.common.black,
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   aboutTitle: {
-    fontSize: '2.5em',
+    fontSize: '3em',
     textAlign: 'center',
     [theme.breakpoints.down('md')]: {
       marginTop: '1em',
@@ -42,16 +42,17 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       marginBottom: '1em',
     },
-    stack: {
-      fontWeight: 300,
-      maxWidth: '50em',
-      lineHeight: 1.4,
-      marginBottom: '2em',
-      [theme.breakpoints.down('md')]: {
-        marginBottom: '1em',
-      },
+  },
+  stack: {
+    fontWeight: 300,
+    maxWidth: '50em',
+    lineHeight: 1.4,
+    marginBottom: '2em',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '1em',
     },
   },
+
   rowContainer: {
     paddingLeft: '5em',
     paddingRight: '5em',
@@ -68,6 +69,18 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 0,
       fontSize: '12rem',
     },
+  },
+  quoteContainer: {
+    fontStyle: 'italic',
+    fontWeight: 300,
+    fontSize: '1.2rem',
+    maxWidth: '50em',
+    lineHeight: 1.4,
+    marginBottom: '2em',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '1em',
+    },
+
   },
 
   myPic: {
@@ -104,21 +117,7 @@ export default function About(props) {
           About Me
         </Typography>
       </Grid>
-      <Grid
-        item
-        container
-        justify='center'
-        className={classes.rowContainer}
-        style={{ marginTop: '3em' }}>
-        <Typography
-          variant='body2'
-          align='center'
-          className={classes.headerContainer}>
-          “when you don't create things, you become defined by your tastes
-          rather than ability. your tastes only narrow & exclude people. so
-          create.” ― Why The Lucky Stiff
-        </Typography>
-      </Grid>
+
       <Grid
         item
         className={classes.rowContainer}
@@ -127,7 +126,7 @@ export default function About(props) {
           align={matchesMD ? 'center' : undefined}
           variant='h4'
           className={classes.aboutTitle}
-          style={{ color: theme.palette.common.lightBlue }}>
+          style={{ color: theme.palette.common.lightBlue, fontSize: '2.3rem' }}>
           My Stack
         </Typography>
       </Grid>
@@ -136,13 +135,14 @@ export default function About(props) {
         container
         justify='center'
         className={classes.rowContainer}
-        style={{ marginTop: '3em' }}>
+        style={{ marginTop: '2em' }}>
         <Typography
           variant='body2'
           align='center'
           className={classes.stack}
           style={{ color: theme.palette.common.yellow }}>
-          React | Node | Javascript | SQL | GIT | Express | Agile | HTML | CSS
+          React | Redux | Node | Javascript | SQL | GIT | Express | Agile | HTML
+          | CSS | Jest
         </Typography>
       </Grid>
 
@@ -205,7 +205,7 @@ export default function About(props) {
                 the backend with the same meticulousness. A structure is only as
                 solid as its foundation.
               </Typography>
-              <Typography
+              {/* <Typography
                 align={matchesMD ? 'center' : undefined}
                 variant='body1'
                 paragraph>
@@ -221,7 +221,7 @@ export default function About(props) {
                 After the product launch, I remain vigilant to ensure everything is
                 kept up to date with the latest technologies. My products won't
                 fall behind in this fast paced-industry.
-              </Typography>
+              </Typography> */}
             </Grid>
           </Grid>
         </Grid>
@@ -252,8 +252,27 @@ export default function About(props) {
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant='body1' paragraph align='center'>
+          <Typography
+            variant='body1'
+            style={{ fontSize: '1.6em' }}
+            paragraph
+            align='center'>
             A Fullstack Developer
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          container
+          justify='center'
+          className={classes.rowContainer}
+          style={{ marginTop: '1em' }}>
+          <Typography
+            variant='body2'
+            align='center'
+            className={classes.quoteContainer}>
+            “when you don't create things, you become defined by your tastes
+            rather than ability. your tastes only narrow & exclude people. so
+            create.” ― Why The Lucky Stiff
           </Typography>
         </Grid>
         <Grid item>
