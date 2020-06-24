@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -10,7 +10,7 @@ import HeadsetTwoToneIcon from '@material-ui/icons/HeadsetTwoTone';
 import LaptopChromebookTwoToneIcon from '@material-ui/icons/LaptopChromebookTwoTone';
 import ButtonArrow from './ButtonArrow';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   mainContainer: {
     marginBottom: '20em',
     minHeight: '100vh',
@@ -65,6 +65,8 @@ export default function Projects(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+  const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -75,7 +77,7 @@ export default function Projects(props) {
       <Grid
         item
         style={{
-          marginLeft: matchesSM ? 0 : '5em',
+          marginLeft: matchesMD ? 0 : '5em',
           marginTop: matchesSM ? '1em' : '2em',
         }}>
         <Typography
@@ -90,14 +92,15 @@ export default function Projects(props) {
       <Grid item>
         <Grid
           container
-          direction='row'
-          justify={matchesSM ? 'center' : 'flex-end'}
+          direction={matchesMD ? 'column' :'row'}
+          justify={matchesMD ? 'center' : 'flex-end'}
+          alignItems='center'
           className={classes.projectContainer}
           style={{ marginTop: matchesSM ? '1em' : '5em' }}>
           <Grid
             item
             style={{
-              textAlign: matchesSM ? 'center' : undefined,
+              textAlign: matchesMD ? 'center' : undefined,
               width: matchesSM ? undefined : '35em',
             }}>
             <Typography variant='h4'>Planner App</Typography>
@@ -105,12 +108,10 @@ export default function Projects(props) {
               Get organized!
             </Typography>
             <Typography variant='subtitle1'>
-              A to-do task manager I worked on for my first official school build
-              week.
-              {<br />}I stepped in to finish the backend after we lost a
-              developer {<br />}
-              Even though it was 2 units ahead of where I was in the curriculum
-              I got it done
+              A to-do task manager
+              {<br />}Gives users the ability to create and organize task lists
+              into categories{<br />}Users can choose from a variety of themes
+              for their dashboard for a personal feel
             </Typography>
             <Button
               variant='outlined'
@@ -132,7 +133,7 @@ export default function Projects(props) {
           </Grid>
           <Grid item>
             <PlaylistAddCheckTwoToneIcon
-              style={{ marginRight: matchesSM ? 0 : '.5em' }}
+              style={{ marginRight: matchesMD ? 0 : '.5em' }}
               className={classes.icon}
               alt='checklist icon'
             />
@@ -143,24 +144,24 @@ export default function Projects(props) {
       <Grid item>
         <Grid
           container
-          direction='row'
-          justify={matchesSM ? 'center' : undefined}
+          direction={matchesMD ? 'column' :'row'}
+          justify={matchesMD ? 'center' : undefined}
+          alignItems='center'
           className={classes.projectContainer}>
           <Grid
             item
             style={{
-              marginLeft: matchesSM ? 0 : '5em',
-              textAlign: matchesSM ? 'center' : undefined,
+              marginLeft: matchesMD ? 0 : '5em',
+              textAlign: matchesMD ? 'center' : undefined,
             }}>
             <Typography variant='h4'>Isolation Recommendation</Typography>
             <Typography variant='subtitle1' className={classes.subtitle}>
               Music during quarantine
             </Typography>
             <Typography variant='subtitle1'>
-              I created this Landing page during the beginning of the 2020
-              quarantine {<br />}My school had an optional build week and I'm
-              glad I opted in {<br />} It was a great learning experience and
-              helped when I had my first real build week
+              A song suggester based on users musical interests {<br />}Users
+              are reminded it's important to stay home during the pandemic{' '}
+              {<br />} This application aims to provide entertainment to users while stuck inside
             </Typography>
             <Button
               variant='outlined'
@@ -182,7 +183,7 @@ export default function Projects(props) {
           </Grid>
           <Grid item>
             <HeadsetTwoToneIcon
-              style={{ marginRight: matchesSM ? 0 : '.5em' }}
+              style={{ marginRight: matchesMD ? 0 : '.5em', marginTop: matchesMD && '.2em' }}
               className={classes.icon}
               alt='checklist icon'
             />
@@ -193,25 +194,24 @@ export default function Projects(props) {
       <Grid item>
         <Grid
           container
-          direction='row'
-          justify={matchesSM ? 'center' : 'flex-end'}
+          direction={matchesMD ? 'column' :'row'}
+          justify={matchesMD ? 'center' : 'flex-end'}
+          alignItems='center'
           className={classes.projectContainer}
           style={{ marginBottom: '10em' }}>
           <Grid
             item
             style={{
-              textAlign: matchesSM ? 'center' : undefined,
-              width: matchesSM ? undefined : '35em',
+              textAlign: matchesMD ? 'center' : undefined,
+              width: matchesMD ? undefined : '35em',
             }}>
             <Typography variant='h4'>Arc Development</Typography>
             <Typography variant='subtitle1' className={classes.subtitle}>
               A complete SPA
             </Typography>
             <Typography variant='subtitle1'>
-              A website I built to sharpen my Material-UI skills
-              {<br />}After I worked though this my confidence grew in my UX
-              skills{<br />}I've used skills I learned from this project on a
-              daily basis
+              A marketing website for a software development company
+              {<br />}Built to showcase and promote the company{<br />}
             </Typography>
             <Button
               variant='outlined'
@@ -231,9 +231,9 @@ export default function Projects(props) {
               />
             </Button>
           </Grid>
-          <Grid item style={{ marginRight: matchesSM ? 0 : '5em' }}>
+          <Grid item style={{ marginRight: matchesMD ? 0 : '5em' }}>
             <LaptopChromebookTwoToneIcon
-              style={{ marginRight: matchesSM ? 0 : '.5em' }}
+              style={{ marginRight: matchesMD ? 0 : '.5em', marginTop: matchesMD && '.1em' }}
               className={classes.icon}
               alt='checklist icon'
             />
