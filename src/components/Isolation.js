@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   showcaseContainer: {
-    margin: '5em 0',
+    margin: '2em 0 6em',
     [theme.breakpoints.down('md')]: {
       margin: '3em 0',
       width: '80%',
@@ -138,7 +138,7 @@ export default function Isolation(props) {
               style={{
                 color: theme.palette.common.yellow,
                 fontSize: '1em',
-                marginBottom: '1em',
+                margin: '1em 0 0',
               }}>
               React | Javascript | Material-UI
             </Typography>
@@ -217,7 +217,7 @@ export default function Isolation(props) {
             </Grid>
           </Grid>
 
-          <Grid item>
+          {/* <Grid item>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
@@ -260,7 +260,7 @@ export default function Isolation(props) {
               confident enough in the concepts I had learned to meet the
               deadline with more than the minimum viable product.
             </Typography>
-          </Grid>
+          </Grid> */}
         </Grid>
         <Hidden mdDown>
           <Grid item className={classes.arrowContainer}>

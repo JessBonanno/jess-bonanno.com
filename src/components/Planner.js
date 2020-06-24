@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   showcaseContainer: {
-    margin: '5em 0',
+    margin: '2em 0 6em',
     [theme.breakpoints.down('md')]: {
       margin: '3em 0',
       width: '80%',
@@ -136,7 +136,7 @@ export default function Planner(props) {
               style={{
                 color: theme.palette.common.yellow,
                 fontSize: '1em',
-                marginBottom: '1em',
+                margin: '1em 0 0',
               }}>
               React | Javascript | Material-UI | SQL | Node | Express | Git
             </Typography>
@@ -220,7 +220,7 @@ export default function Planner(props) {
                     </ListItemIcon>
                     <ListItemText
                       classes={{ primary: classes.listText }}
-                      primary='Created an extra  feature programmatically,  allowing  user themes.'
+                      primary='Implemented an extra feature allowing  user themes.'
                     />
                   </ListItem>
                 </List>
@@ -247,8 +247,8 @@ export default function Planner(props) {
               </Grid>
             </Grid>{' '}
           </Grid>
-          <Grid item>
-            <Typography
+          {/* <Grid item> */}
+            {/* <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
@@ -282,8 +282,8 @@ export default function Planner(props) {
               lists by creating the tables to store the data with Knex as well
               as implementing the REST API endpoints with response and error
               handling.
-            </Typography>
-          </Grid>
+            </Typography> */}
+          {/* </Grid> */}
         </Grid>
         <Hidden mdDown>
           <Grid item className={classes.arrowContainer}>

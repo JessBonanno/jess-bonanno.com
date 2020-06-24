@@ -52,7 +52,7 @@ const useStyles = Arc((theme) => ({
     },
   },
   showcaseContainer: {
-    margin: '5em 0',
+    margin: '2em 0 6em',
     [theme.breakpoints.down('md')]: {
       margin: '3em 0',
       width: '80%',
@@ -137,9 +137,9 @@ export default function Isolation(props) {
                 style={{
                   color: theme.palette.common.yellow,
                   fontSize: '1em',
-                  marginBottom: '1em',
+                  margin: '1em 0 0',
                 }}>
-                React | Javascript | Material-UI | Node | Firebase | Nodemailer
+                  React | Javascript | Material-UI | Node | Firebase | Nodemailer
               </Typography>
             </Grid>
           </Grid>
@@ -220,7 +220,7 @@ export default function Isolation(props) {
             </Grid>
           </Grid>
 
-          <Grid item>
+          {/* <Grid item>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
@@ -265,7 +265,7 @@ export default function Isolation(props) {
               while also being a student but I feel it was well worth it
               considering all that was gained.
             </Typography>
-          </Grid>
+          </Grid> */}
         </Grid>
         <Hidden mdDown>
           <Grid item className={classes.arrowContainer}>
