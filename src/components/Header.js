@@ -43,7 +43,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
     color: theme.palette.common.paleGreen,
     [theme.breakpoints.down('md')]: {
-      fontSize: '1.5rem',
+      fontSize: '1.3rem',
+      marginLeft: '15px',
     },
   },
   tabContainer: {
@@ -328,7 +329,7 @@ export default function Header(props) {
                 style={{
                   fontFamily: 'Exo, sans-serif',
                   fontSize: matchesSM ? '1rem' : '1.3rem',
-                  marginLeft: '1em',
+                  marginLeft: matchesSM ? '.5em' : '1em',
                 }}>
                 a fullstack dev
               </span>
