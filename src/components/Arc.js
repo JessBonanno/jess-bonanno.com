@@ -17,6 +17,7 @@ import DoneAllTwoToneIcon from '@material-ui/icons/DoneAllTwoTone';
 
 import arc from '../assets/images/arc.png';
 import arcMobile from '../assets/images/arc-mobile.png';
+import arcMac from '../assets/images/arc-mac.png';
 
 const useStyles = Arc((theme) => ({
   arcContainer: {
@@ -301,7 +302,7 @@ export default function Isolation(props) {
           md>
           <Grid item style={{ margin: '2em' }}>
             <img
-              src={arc}
+              src={arcMac}
               alt='desktop isolation-recommendations'
               style={{ maxWidth: matchesSM ? '100%' : 700 }}
             />

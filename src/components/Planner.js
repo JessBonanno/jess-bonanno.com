@@ -18,6 +18,8 @@ import DoneAllTwoToneIcon from '@material-ui/icons/DoneAllTwoTone';
 import planner from '../assets/images/planner.png';
 import plannerThemes from '../assets/images/planner-themes.png';
 import plannerMobile from '../assets/images/planner-mobile.png';
+import plannerMac from '../assets/images/planner-mac.png';
+import plannerMacTheme from '../assets/images/planner-mac-theme.png';
 
 const useStyles = makeStyles((theme) => ({
   plannerContainer: {
@@ -319,14 +321,14 @@ export default function Planner(props) {
           md>
           <Grid item style={{ margin: '2em' }}>
             <img
-              src={planner}
+              src={plannerMac}
               alt='desktop planner'
               style={{ maxWidth: matchesSM ? '100%' : 700 }}
             />
           </Grid>
           <Grid item style={{ margin: '2em' }}>
             <img
-              src={plannerThemes}
+              src={plannerMacTheme}
               alt='planner themes'
               style={{ maxWidth: matchesSM ? '100%' : 700 }}
             />
