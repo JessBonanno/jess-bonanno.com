@@ -46,10 +46,10 @@ const useStyles = makeStyles(theme => ({
   stack: {
     fontWeight: 300,
     maxWidth: '50em',
-    lineHeight: 1.4,
     marginBottom: '2em',
     [theme.breakpoints.down('md')]: {
       marginBottom: '1em',
+      lineHeight: 2.5,
     },
   },
 
