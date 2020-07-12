@@ -99,8 +99,8 @@ export default function Planner(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={RouterLink}
-              alt='back to arc development'
-              to='/arc'
+              alt='back to trivia game'
+              to='/trivia'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowBackIcon className={classes.arrow} />
             </IconButton>

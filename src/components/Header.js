@@ -155,22 +155,28 @@ export default function Header(props) {
       selectedIndex: 0,
     },
     {
+      name: 'Trivia Game',
+      link: '/trivia',
+      activeIndex: 1,
+      selectedIndex: 1,
+    },
+    {
       name: 'Planner App',
       link: '/planner',
       activeIndex: 1,
-      selectedIndex: 1,
+      selectedIndex: 2,
     },
     {
       name: 'Isolation Recommendations',
       link: '/isolation-recommendations',
       activeIndex: 1,
-      selectedIndex: 2,
+      selectedIndex: 3,
     },
     {
       name: 'Arc Development',
       link: '/arc',
       activeIndex: 1,
-      selectedIndex: 3,
+      selectedIndex: 4,
     },
   ];
 

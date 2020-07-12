@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { makeStyles as Arc, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
@@ -15,12 +15,11 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import DoneAllTwoToneIcon from '@material-ui/icons/DoneAllTwoTone';
 
-import arc from '../assets/images/arc.png';
-import arcMobile from '../assets/images/arc-mobile.png';
-import arcMac from '../assets/images/arc-mac.png';
+import triviaMobile from '../assets/images/trivia-mobile.png';
+import plannerMac from '../assets/images/trivia-desktop.png';
 
-const useStyles = Arc((theme) => ({
-  arcContainer: {
+const useStyles = makeStyles(theme => ({
+  plannerContainer: {
     margin: '4em 0 20em',
     backgroundColor: theme.palette.common.black,
     width: '100%',
@@ -68,7 +67,7 @@ const useStyles = Arc((theme) => ({
   },
 }));
 
-export default function Isolation(props) {
+export default function Planner(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -80,7 +79,7 @@ export default function Isolation(props) {
   }, []);
 
   return (
-    <Grid container direction='column' className={classes.arcContainer}>
+    <Grid container direction='column' className={classes.plannerContainer}>
       {/* title block */}
       <Grid
         item
@@ -97,8 +96,8 @@ export default function Isolation(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={RouterLink}
-              alt='back to isolation-recommendations'
-              to='/isolation-recommendations'
+              alt='back to arc development'
+              to='/arc'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowBackIcon className={classes.arrow} />
             </IconButton>
@@ -110,39 +109,37 @@ export default function Isolation(props) {
             container
             alignItems={matchesMD ? 'center' : 'center'}
             direction={matchesMD ? 'column' : 'row'}>
-            <Typography
-              variant='h4'
-              align={matchesMD ? 'center' : undefined}
-              style={{ fontSize: matchesSM && '2.2rem' }}>
-              Arc Development
+            <Typography variant='h4' align={matchesMD ? 'center' : undefined}>
+              Trivia Game
             </Typography>
             <Link
               style={{ marginLeft: matchesMD ? 0 : '1em' }}
-              href='https://github.com/JessBonanno/Mui'
+              href='https://github.com/WebPT16'
               color='secondary'
               rel='noopener noreferrer'
               target='_blank'>
               Github
             </Link>
-            <Grid
-              item
-              container
-              direction='column'
-              alignItems={matchesMD ? 'center' : 'flex-start'}>
-              <Typography variant='h6'>Stack Used</Typography>
+          </Grid>
+          <Grid
+            item
+            container
+            direction='column'
+            alignItems={matchesMD ? 'center' : 'flex-start'}>
+            <Typography variant='h6'>Stack Used</Typography>
 
-              <Typography
-                variant='body2'
-                align='center'
-                className={classes.stack}
-                style={{
-                  color: theme.palette.common.yellow,
-                  fontSize: '1em',
-                  margin: '1em 0 0',
-                }}>
-                  React | Javascript | Material-UI | Node | Firebase | Nodemailer
-              </Typography>
-            </Grid>
+            <Typography
+              variant='body2'
+              align='center'
+              className={classes.stack}
+              style={{
+                color: theme.palette.common.yellow,
+                fontSize: '1em',
+                margin: '1em 0 0',
+              }}>
+              React | Javascript | Material-UI | SQL | Node | Express | Git |
+              Firebase
+            </Typography>
           </Grid>
           <Grid
             item
@@ -165,9 +162,7 @@ export default function Isolation(props) {
                     </ListItemIcon>
                     <ListItemText
                       classes={{ primary: classes.listText }}
-                      primary='Built a fully responsive user interface from  start to finish using React and Material-UI.
-
-
+                      primary='Built a fully responsive user interface using React and Material-UI.
     '
                     />
                   </ListItem>
@@ -188,9 +183,7 @@ export default function Isolation(props) {
                     </ListItemIcon>
                     <ListItemText
                       classes={{ primary: classes.listText }}
-                      primary='Created SPA functionality using the React Router library.
-
-                      '
+                      primary='Created SPA functionality using the React Router library.'
                     />
                   </ListItem>
                 </List>
@@ -211,70 +204,98 @@ export default function Isolation(props) {
                     </ListItemIcon>
                     <ListItemText
                       classes={{ primary: classes.listText }}
-                      primary='Used this project to solidify newly learned Material-UI concepts.
-
-                     .'
+                      primary='Developed backend REST API with Node Express and SQL.'
                     />
                   </ListItem>
                 </List>
               </Grid>
-            </Grid>
+              <Grid item>
+                <List dense style={{ padding: 0 }}>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                      <DoneAllTwoToneIcon
+                        style={{
+                          fontSize: '1rem',
+                          marginBottom: '.3em',
+                          width: 50,
+                          color: theme.palette.common.yellow,
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      classes={{ primary: classes.listText }}
+                      primary='Implemented leaderboard to keep track of user scores by category or difficulty.'
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
+              <Grid item>
+                <List dense style={{ padding: 0 }}>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                      <DoneAllTwoToneIcon
+                        style={{
+                          fontSize: '1rem',
+                          marginBottom: '.3em',
+                          width: 50,
+                          color: theme.palette.common.yellow,
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      classes={{ primary: classes.listText }}
+                      primary='Worked effectively on a team of developers.'
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
+            </Grid>{' '}
           </Grid>
-
-          {/* <Grid item>
-            <Typography
+          {/* <Grid item> */}
+          {/* <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              My game-changer.
+              This app was a lot of fun to make.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              I decided to take a supplemental course aside from my regular
-              studies to sharpen my design skills. I was drawn to Material-UI
-              from the minute I saw it and decided that this would be my library
-              of choice for styling. I knew I would have to master this if I
-              wanted to give my applications a professional look and feel.
+              I went into this build week as an intro to React student. I was
+              tasked with creating forms for the app as well as getting data
+              from an API and displaying it.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              Building this app taught me a lot about styling components and
-              using Material-UI to make fully responsive SPAs. I was able to use
-              almost every component available in their library. This gave me a
-              solid foundation to expand upon in future projects.
+              I went above and beyond what was asked and built out an entire
+              user interface using React and Material-UI. I also added an extra
+              feature that allows users to choose a theme for their dashboard
+              for better user experience.
             </Typography>
             <Typography
               variant='body1'
               align={matchesMD ? 'center' : undefined}
               paragraph>
-              Using the Grid component throughout the app I gained gain a deep
-              understanding of how to create perfectly aligned layouts. Using
-              the custom theme system I learned how to properly colors fonts and
-              more to create consistency across the entire site.
-            </Typography>
-
-            <Typography
-              variant='body1'
-              align={matchesMD ? 'center' : undefined}
-              paragraph>
-              This helped me to overcome the challenge of working with
-              styled-components. It was a lot of work to go through this course
-              while also being a student but I feel it was well worth it
-              considering all that was gained.
-            </Typography>
-          </Grid> */}
+              The biggest obstacle I had to overcome was when the end of build
+              week was almost upon us and we lost our backend developer. I
+              tackled finishing up the backend with only 2 days left. I was able
+              to build out a data structure to handle the adding of user to-do
+              lists by creating the tables to store the data with Knex as well
+              as implementing the REST API endpoints with response and error
+              handling.
+            </Typography> */}
+          {/* </Grid> */}
         </Grid>
         <Hidden mdDown>
           <Grid item className={classes.arrowContainer}>
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={RouterLink}
-              alt='forward to trivia game'
-              to='/trivia'
+              alt='forward to planner app'
+              to='/planner'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowForwardIcon className={classes.arrow} />
             </IconButton>
@@ -283,14 +304,14 @@ export default function Isolation(props) {
         <Hidden mdDown>
           <Grid item>
             <img
-              src={arcMobile}
-              alt='mobile isolation'
+              src={triviaMobile}
+              alt='mobile planner'
               style={{ maxHeight: matchesSM ? 200 : 400 }}
             />
           </Grid>
         </Hidden>{' '}
       </Grid>
-      {/* showcase block */}
+      {/* shwocase block */}
       <Grid item container alignItems='center' justify='space-between'>
         <Grid
           item
@@ -302,8 +323,8 @@ export default function Isolation(props) {
           md>
           <Grid item style={{ margin: '2em' }}>
             <img
-              src={arcMac}
-              alt='desktop isolation-recommendations'
+              src={plannerMac}
+              alt='desktop planner'
               style={{ maxWidth: matchesSM ? '100%' : 700 }}
             />
           </Grid>
@@ -318,8 +339,8 @@ export default function Isolation(props) {
             md>
             <Grid item>
               <img
-                src={arcMobile}
-                alt='mobile isolation-recommendations'
+                src={triviaMobile}
+                alt='mobile planner'
                 style={{
                   maxHeight: matchesXS ? 200 : 400,
                   marginBottom: matchesSM && '7em',

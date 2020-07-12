@@ -8,6 +8,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PlaylistAddCheckTwoToneIcon from '@material-ui/icons/PlaylistAddCheckTwoTone';
 import HeadsetTwoToneIcon from '@material-ui/icons/HeadsetTwoTone';
 import LaptopChromebookTwoToneIcon from '@material-ui/icons/LaptopChromebookTwoTone';
+import HelpTwoToneIcon from '@material-ui/icons/HelpTwoTone';
 import ButtonArrow from './ButtonArrow';
 
 const useStyles = makeStyles(theme => ({
@@ -67,7 +68,6 @@ export default function Projects(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
   const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
 
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -88,15 +88,68 @@ export default function Projects(props) {
           Projects
         </Typography>
       </Grid>
-      {/*----- Planner -----*/}
+      {/*----- Trivia -----*/}
       <Grid item>
         <Grid
           container
-          direction={matchesMD ? 'column' :'row'}
+          direction={matchesMD ? 'column' : 'row'}
           justify={matchesMD ? 'center' : 'flex-end'}
           alignItems='center'
           className={classes.projectContainer}
           style={{ marginTop: matchesSM ? '1em' : '5em' }}>
+          <Grid
+            item
+            style={{
+              textAlign: matchesMD ? 'center' : undefined,
+              width: matchesSM ? undefined : '35em',
+            }}>
+            <Typography variant='h4'>Trivia Game</Typography>
+            <Typography variant='subtitle1' className={classes.subtitle}>
+              Test your knowledge!
+            </Typography>
+            <Typography variant='subtitle1'>
+              A trivia quiz game
+              {<br />}Allows users to answer multiple choice trivia question
+              {<br />}Multiple categories and difficulty levels to choose from
+              {<br />}Complete with a leader board to see where you rank
+            </Typography>
+            <Button
+              variant='outlined'
+              color='secondary'
+              className={classes.projectButton}
+              component={Link}
+              to='/trivia'
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(2);
+              }}>
+              <span style={{ marginRight: 10 }}>Check it out</span>
+              <ButtonArrow
+                width={15}
+                height={15}
+                fill={theme.palette.common.yellow}
+              />
+            </Button>
+          </Grid>
+          <Grid item>
+            <HelpTwoToneIcon
+              style={{ marginRight: matchesMD ? 0 : '.5em' }}
+              className={classes.icon}
+              alt='checklist icon'
+            />
+          </Grid>
+        </Grid>
+      </Grid>
+
+      {/*----- Planner -----*/}
+      <Grid item>
+        <Grid
+          container
+          direction={matchesMD ? 'column' : 'row'}
+          justify={matchesMD ? 'center' : undefined}
+          alignItems='center'
+          className={classes.projectContainer}
+          style={{ marginLeft: matchesMD ? 0 : '5em' }}>
           <Grid
             item
             style={{
@@ -144,14 +197,13 @@ export default function Projects(props) {
       <Grid item>
         <Grid
           container
-          direction={matchesMD ? 'column' :'row'}
-          justify={matchesMD ? 'center' : undefined}
+          direction={matchesMD ? 'column' : 'row'}
+          justify={matchesMD ? 'center' : 'flex-end'}
           alignItems='center'
           className={classes.projectContainer}>
           <Grid
             item
             style={{
-              marginLeft: matchesMD ? 0 : '5em',
               textAlign: matchesMD ? 'center' : undefined,
             }}>
             <Typography variant='h4'>Isolation Recommendation</Typography>
@@ -161,7 +213,8 @@ export default function Projects(props) {
             <Typography variant='subtitle1'>
               A song suggester based on users musical interests {<br />}Users
               are reminded it's important to stay home during the pandemic{' '}
-              {<br />} This application aims to provide entertainment to users while stuck inside
+              {<br />} This application aims to provide entertainment to users
+              while stuck inside
             </Typography>
             <Button
               variant='outlined'
@@ -183,7 +236,10 @@ export default function Projects(props) {
           </Grid>
           <Grid item>
             <HeadsetTwoToneIcon
-              style={{ marginRight: matchesMD ? 0 : '.5em', marginTop: matchesMD && '.2em' }}
+              style={{
+                marginRight: matchesMD ? 0 : '.5em',
+                marginTop: matchesMD && '.2em',
+              }}
               className={classes.icon}
               alt='checklist icon'
             />
@@ -194,11 +250,11 @@ export default function Projects(props) {
       <Grid item>
         <Grid
           container
-          direction={matchesMD ? 'column' :'row'}
-          justify={matchesMD ? 'center' : 'flex-end'}
+          direction={matchesMD ? 'column' : 'row'}
+          justify={matchesMD ? 'center' : undefined}
           alignItems='center'
           className={classes.projectContainer}
-          style={{ marginBottom: '10em' }}>
+          style={{ marginBottom: '10em', marginLeft: matchesMD ? 0 : '5em' }}>
           <Grid
             item
             style={{
@@ -233,7 +289,10 @@ export default function Projects(props) {
           </Grid>
           <Grid item style={{ marginRight: matchesMD ? 0 : '5em' }}>
             <LaptopChromebookTwoToneIcon
-              style={{ marginRight: matchesMD ? 0 : '.5em', marginTop: matchesMD && '.1em' }}
+              style={{
+                marginRight: matchesMD ? 0 : '.5em',
+                marginTop: matchesMD && '.1em',
+              }}
               className={classes.icon}
               alt='checklist icon'
             />

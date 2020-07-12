@@ -8,6 +8,7 @@ import LandingPage from './LandingPage';
 import Footer from './Footer';
 import Resume from './Resume';
 import Projects from './Projects';
+import Trivia from './Trivia';
 import About from './About';
 import Planner from './Planner';
 import Isolation from './Isolation';
@@ -31,7 +32,7 @@ function App() {
           <Route
             exact
             path='/'
-            render={(props) => (
+            render={props => (
               <LandingPage
                 {...props}
                 setSelectedIndex={setSelectedIndex}
@@ -42,7 +43,7 @@ function App() {
           <Route
             exact
             path='/resume'
-            render={(props) => (
+            render={props => (
               <Resume
                 {...props}
                 setSelectedIndex={setSelectedIndex}
@@ -53,7 +54,7 @@ function App() {
           <Route
             exact
             path='/projects'
-            render={(props) => (
+            render={props => (
               <Projects
                 {...props}
                 setSelectedIndex={setSelectedIndex}
@@ -63,8 +64,19 @@ function App() {
           />
           <Route
             exact
+            path='/trivia'
+            render={props => (
+              <Trivia
+                {...props}
+                setSelectedIndex={setSelectedIndex}
+                setValue={setValue}
+              />
+            )}
+          />
+          <Route
+            exact
             path='/planner'
-            render={(props) => (
+            render={props => (
               <Planner
                 {...props}
                 setSelectedIndex={setSelectedIndex}
@@ -75,7 +87,7 @@ function App() {
           <Route
             exact
             path='/isolation-recommendations'
-            render={(props) => (
+            render={props => (
               <Isolation
                 {...props}
                 setSelectedIndex={setSelectedIndex}
@@ -86,7 +98,7 @@ function App() {
           <Route
             exact
             path='/arc'
-            render={(props) => (
+            render={props => (
               <Arc
                 {...props}
                 setSelectedIndex={setSelectedIndex}
@@ -97,7 +109,7 @@ function App() {
           <Route
             exact
             path='/about'
-            render={(props) => (
+            render={props => (
               <About
                 {...props}
                 setSelectedIndex={setSelectedIndex}
@@ -108,7 +120,7 @@ function App() {
           <Route
             exact
             path='/contact'
-            render={(props) => (
+            render={props => (
               <Contact
                 {...props}
                 setSelectedIndex={setSelectedIndex}
