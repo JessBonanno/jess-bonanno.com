@@ -15,11 +15,11 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import DoneAllTwoToneIcon from '@material-ui/icons/DoneAllTwoTone';
 
-import planner from '../assets/images/planner.png';
-import plannerThemes from '../assets/images/planner-themes.png';
-import plannerMobile from '../assets/images/planner-mobile.png';
-import plannerMac from '../assets/images/planner-mac.png';
-import plannerMacTheme from '../assets/images/planner-mac-theme.png';
+import findMobile from '../assets/images/find-mobile.png';
+import dashMobile from '../assets/images/dash-mobile.png';
+
+import findMac from '../assets/images/find-desktop.png';
+import dashMac from '../assets/images/dash-desktop.png';
 
 const useStyles = makeStyles(theme => ({
   plannerContainer: {
@@ -99,8 +99,8 @@ export default function Planner(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={RouterLink}
-              alt='back to thirsty plant'
-              to='/thirstyplant'
+              alt='back to trivia app'
+              to='/trivia'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowBackIcon className={classes.arrow} />
             </IconButton>
@@ -113,11 +113,11 @@ export default function Planner(props) {
             alignItems={matchesMD ? 'center' : 'center'}
             direction={matchesMD ? 'column' : 'row'}>
             <Typography variant='h4' align={matchesMD ? 'center' : undefined}>
-              Planner App
+              Thirsty Plant
             </Typography>
             <Link
               style={{ marginLeft: matchesMD ? 0 : '1em' }}
-              href='https://github.com/Wunderlist-1'
+              href='https://github.com/WebPT16'
               color='secondary'
               rel='noopener noreferrer'
               target='_blank'>
@@ -140,7 +140,7 @@ export default function Planner(props) {
                 fontSize: '1em',
                 margin: '1em 0 0',
               }}>
-              React | Javascript | Material-UI | SQL | Node | Express | Git
+              React | Javascript | Material-UI | Git
             </Typography>
           </Grid>
           <Grid
@@ -170,47 +170,67 @@ export default function Planner(props) {
                   </ListItem>
                 </List>
               </Grid>
+              <Grid item>
+                <List dense style={{ padding: 0 }}>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                      <DoneAllTwoToneIcon
+                        style={{
+                          fontSize: '1rem',
+                          marginBottom: '.3em',
+                          width: 50,
+                          color: theme.palette.common.yellow,
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      classes={{ primary: classes.listText }}
+                      primary='Set up a global state management system.'
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
+              <Grid item>
+                <List dense style={{ padding: 0 }}>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                      <DoneAllTwoToneIcon
+                        style={{
+                          fontSize: '1rem',
+                          marginBottom: '.3em',
+                          width: 50,
+                          color: theme.palette.common.yellow,
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      classes={{ primary: classes.listText }}
+                      primary='Completed all CRUD operations working with a Rest API.'
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
+              <Grid item>
+                <List dense style={{ padding: 0 }}>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                      <DoneAllTwoToneIcon
+                        style={{
+                          fontSize: '1rem',
+                          marginBottom: '.3em',
+                          width: 50,
+                          color: theme.palette.common.yellow,
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      classes={{ primary: classes.listText }}
+                      primary='Implemented a plant photo identification feature to quickly find plant information.'
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
 
-              <Grid item>
-                <List dense style={{ padding: 0 }}>
-                  <ListItem disableGutters>
-                    <ListItemIcon>
-                      <DoneAllTwoToneIcon
-                        style={{
-                          fontSize: '1rem',
-                          marginBottom: '.3em',
-                          width: 50,
-                          color: theme.palette.common.yellow,
-                        }}
-                      />
-                    </ListItemIcon>
-                    <ListItemText
-                      classes={{ primary: classes.listText }}
-                      primary='Developed backend REST API with Node Express and SQL.'
-                    />
-                  </ListItem>
-                </List>
-              </Grid>
-              <Grid item>
-                <List dense style={{ padding: 0 }}>
-                  <ListItem disableGutters>
-                    <ListItemIcon>
-                      <DoneAllTwoToneIcon
-                        style={{
-                          fontSize: '1rem',
-                          marginBottom: '.3em',
-                          width: 50,
-                          color: theme.palette.common.yellow,
-                        }}
-                      />
-                    </ListItemIcon>
-                    <ListItemText
-                      classes={{ primary: classes.listText }}
-                      primary='Implemented an extra feature allowing  user themes.'
-                    />
-                  </ListItem>
-                </List>
-              </Grid>
               <Grid item>
                 <List dense style={{ padding: 0 }}>
                   <ListItem disableGutters>
@@ -233,51 +253,14 @@ export default function Planner(props) {
               </Grid>
             </Grid>{' '}
           </Grid>
-          {/* <Grid item> */}
-          {/* <Typography
-              variant='body1'
-              align={matchesMD ? 'center' : undefined}
-              paragraph>
-              This app was a lot of fun to make.
-            </Typography>
-            <Typography
-              variant='body1'
-              align={matchesMD ? 'center' : undefined}
-              paragraph>
-              I went into this build week as an intro to React student. I was
-              tasked with creating forms for the app as well as getting data
-              from an API and displaying it.
-            </Typography>
-            <Typography
-              variant='body1'
-              align={matchesMD ? 'center' : undefined}
-              paragraph>
-              I went above and beyond what was asked and built out an entire
-              user interface using React and Material-UI. I also added an extra
-              feature that allows users to choose a theme for their dashboard
-              for better user experience.
-            </Typography>
-            <Typography
-              variant='body1'
-              align={matchesMD ? 'center' : undefined}
-              paragraph>
-              The biggest obstacle I had to overcome was when the end of build
-              week was almost upon us and we lost our backend developer. I
-              tackled finishing up the backend with only 2 days left. I was able
-              to build out a data structure to handle the adding of user to-do
-              lists by creating the tables to store the data with Knex as well
-              as implementing the REST API endpoints with response and error
-              handling.
-            </Typography> */}
-          {/* </Grid> */}
         </Grid>
         <Hidden mdDown>
           <Grid item className={classes.arrowContainer}>
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={RouterLink}
-              alt='forward isolation recommendations'
-              to='/isolation-recommendations'
+              alt='forward to planner app'
+              to='/planner'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowForwardIcon className={classes.arrow} />
             </IconButton>
@@ -286,8 +269,15 @@ export default function Planner(props) {
         <Hidden mdDown>
           <Grid item>
             <img
-              src={plannerMobile}
-              alt='mobile planner'
+              src={findMobile}
+              alt='find my plant mobile view'
+              style={{ maxHeight: matchesSM ? 200 : 400 }}
+            />
+          </Grid>
+          <Grid item>
+            <img
+              src={dashMobile}
+              alt='dashboard mobile view'
               style={{ maxHeight: matchesSM ? 200 : 400 }}
             />
           </Grid>
@@ -305,15 +295,24 @@ export default function Planner(props) {
           md>
           <Grid item style={{ margin: '2em' }}>
             <img
-              src={plannerMac}
-              alt='desktop planner'
+              src={findMac}
+              alt='find my plant mac view'
               style={{ maxWidth: matchesSM ? '100%' : 700 }}
             />
           </Grid>
+        </Grid>
+        <Grid
+          item
+          container
+          direction={matchesMD ? 'column' : 'row'}
+          className={classes.showcaseContainer}
+          justify='center'
+          alignItems='center'
+          md>
           <Grid item style={{ margin: '2em' }}>
             <img
-              src={plannerMacTheme}
-              alt='planner themes'
+              src={dashMac}
+              alt='dashboard mac view'
               style={{ maxWidth: matchesSM ? '100%' : 700 }}
             />
           </Grid>
@@ -328,8 +327,18 @@ export default function Planner(props) {
             md>
             <Grid item>
               <img
-                src={plannerMobile}
+                src={findMobile}
                 alt='mobile planner'
+                style={{
+                  maxHeight: matchesXS ? 200 : 400,
+                  marginBottom: matchesSM && '7em',
+                }}
+              />
+            </Grid>
+            <Grid item>
+              <img
+                src={dashMobile}
+                alt='dashboard mobile view'
                 style={{
                   maxHeight: matchesXS ? 200 : 400,
                   marginBottom: matchesSM && '7em',

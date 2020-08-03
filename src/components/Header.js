@@ -33,7 +33,7 @@ function ElevationScroll(props) {
   });
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   name: {
     ...theme.typography.tab,
     textDecoration: 'none',
@@ -131,12 +131,12 @@ export default function Header(props) {
     props.setValue(newValue);
   };
 
-  const handleMenuClick = (e) => {
+  const handleMenuClick = e => {
     setAnchorEl(e.currentTarget);
     setOpenMenu(true);
   };
 
-  const handleMenuClose = (e) => {
+  const handleMenuClose = e => {
     setAnchorEl(null);
     setOpenMenu(false);
   };
@@ -155,11 +155,12 @@ export default function Header(props) {
       selectedIndex: 0,
     },
     {
-      name: 'Trivia Game',
-      link: '/trivia',
+      name: 'Thirsty Plant',
+      link: '/thirstyplant',
       activeIndex: 1,
       selectedIndex: 1,
     },
+
     {
       name: 'Planner App',
       link: '/planner',
@@ -178,6 +179,12 @@ export default function Header(props) {
       activeIndex: 1,
       selectedIndex: 4,
     },
+    {
+      name: 'Trivia Game',
+      link: '/trivia',
+      activeIndex: 1,
+      selectedIndex: 5,
+    },
   ];
 
   const routes = [
@@ -192,7 +199,7 @@ export default function Header(props) {
       activeIndex: 1,
       ariaOwns: anchorEl ? 'simple-menu' : undefined,
       ariaPopup: anchorEl ? 'true' : undefined,
-      mouseOver: (e) => handleMenuClick(e),
+      mouseOver: e => handleMenuClick(e),
     },
     {
       name: 'Resume',
@@ -213,7 +220,7 @@ export default function Header(props) {
 
   // ! this will fix the active tab on refresh to be the current tab the user is on
   useEffect(() => {
-    [...menuOptions, ...routes].forEach((route) => {
+    [...menuOptions, ...routes].forEach(route => {
       switch (window.location.pathname) {
         case `${route.link}`:
           if (props.value !== route.activeIndex) {
@@ -268,7 +275,7 @@ export default function Header(props) {
         {menuOptions.map((option, i) => (
           <MenuItem
             key={`${option}${i}`}
-            onClick={(e) => {
+            onClick={e => {
               handleMenuItemClick(e, i);
               props.setValue(1);
               handleMenuClose();
@@ -293,7 +300,7 @@ export default function Header(props) {
         onOpen={() => setOpenDrawer(true)}>
         <div className={classes.toolbarMargin} />
         <List disablePadding>
-          {routes.map((route) => (
+          {routes.map(route => (
             <ListItem
               key={`${route}${route.activeIndex}`}
               onClick={() => {
@@ -329,7 +336,7 @@ export default function Header(props) {
         <AppBar className={classes.appbar}>
           {/* disableGutters defaults to disableGutters={true} */}
           <Toolbar disableGutters>
-            <Typography className={classes.name} component={Link} to='/' >
+            <Typography className={classes.name} component={Link} to='/'>
               Jess Bonanno{' '}
               <span
                 style={{

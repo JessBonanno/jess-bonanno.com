@@ -14,6 +14,7 @@ import Planner from './Planner';
 import Isolation from './Isolation';
 import Arc from './Arc';
 import Contact from './Contact';
+import ThirstyPlant from './ThirstyPlant';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -56,6 +57,17 @@ function App() {
             path='/projects'
             render={props => (
               <Projects
+                {...props}
+                setSelectedIndex={setSelectedIndex}
+                setValue={setValue}
+              />
+            )}
+          />
+          <Route
+            exact
+            path='/thirstyplant'
+            render={props => (
+              <ThirstyPlant
                 {...props}
                 setSelectedIndex={setSelectedIndex}
                 setValue={setValue}

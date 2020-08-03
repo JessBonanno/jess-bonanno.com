@@ -251,51 +251,14 @@ export default function Planner(props) {
               </Grid>
             </Grid>{' '}
           </Grid>
-          {/* <Grid item> */}
-          {/* <Typography
-              variant='body1'
-              align={matchesMD ? 'center' : undefined}
-              paragraph>
-              This app was a lot of fun to make.
-            </Typography>
-            <Typography
-              variant='body1'
-              align={matchesMD ? 'center' : undefined}
-              paragraph>
-              I went into this build week as an intro to React student. I was
-              tasked with creating forms for the app as well as getting data
-              from an API and displaying it.
-            </Typography>
-            <Typography
-              variant='body1'
-              align={matchesMD ? 'center' : undefined}
-              paragraph>
-              I went above and beyond what was asked and built out an entire
-              user interface using React and Material-UI. I also added an extra
-              feature that allows users to choose a theme for their dashboard
-              for better user experience.
-            </Typography>
-            <Typography
-              variant='body1'
-              align={matchesMD ? 'center' : undefined}
-              paragraph>
-              The biggest obstacle I had to overcome was when the end of build
-              week was almost upon us and we lost our backend developer. I
-              tackled finishing up the backend with only 2 days left. I was able
-              to build out a data structure to handle the adding of user to-do
-              lists by creating the tables to store the data with Knex as well
-              as implementing the REST API endpoints with response and error
-              handling.
-            </Typography> */}
-          {/* </Grid> */}
         </Grid>
         <Hidden mdDown>
           <Grid item className={classes.arrowContainer}>
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={RouterLink}
-              alt='forward to planner app'
-              to='/planner'
+              alt='forward to thirsty plant'
+              to='/thirstyplant'
               onClick={() => props.setSelectedIndex(2)}>
               <ArrowForwardIcon className={classes.arrow} />
             </IconButton>
@@ -305,7 +268,7 @@ export default function Planner(props) {
           <Grid item>
             <img
               src={triviaMobile}
-              alt='mobile planner'
+              alt='mobile trivia'
               style={{ maxHeight: matchesSM ? 200 : 400 }}
             />
           </Grid>
@@ -324,7 +287,7 @@ export default function Planner(props) {
           <Grid item style={{ margin: '2em' }}>
             <img
               src={plannerMac}
-              alt='desktop planner'
+              alt='desktop trivia'
               style={{ maxWidth: matchesSM ? '100%' : 700 }}
             />
           </Grid>
@@ -340,7 +303,7 @@ export default function Planner(props) {
             <Grid item>
               <img
                 src={triviaMobile}
-                alt='mobile planner'
+                alt='mobile trivia'
                 style={{
                   maxHeight: matchesXS ? 200 : 400,
                   marginBottom: matchesSM && '7em',

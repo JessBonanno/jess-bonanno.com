@@ -9,12 +9,14 @@ import PlaylistAddCheckTwoToneIcon from '@material-ui/icons/PlaylistAddCheckTwoT
 import HeadsetTwoToneIcon from '@material-ui/icons/HeadsetTwoTone';
 import LaptopChromebookTwoToneIcon from '@material-ui/icons/LaptopChromebookTwoTone';
 import HelpTwoToneIcon from '@material-ui/icons/HelpTwoTone';
+import LocalDrinkIcon from '@material-ui/icons/LocalDrink';
 import ButtonArrow from './ButtonArrow';
 
 const useStyles = makeStyles(theme => ({
   mainContainer: {
     marginBottom: '20em',
     minHeight: '100vh',
+    paddingBottom: '20em',
     marginTop: '4em',
     backgroundColor: theme.palette.common.black,
     [theme.breakpoints.down('md')]: {
@@ -88,7 +90,7 @@ export default function Projects(props) {
           Projects
         </Typography>
       </Grid>
-      {/*----- Trivia -----*/}
+      {/*----- ThirstyPlant -----*/}
       <Grid item>
         <Grid
           container
@@ -103,22 +105,24 @@ export default function Projects(props) {
               textAlign: matchesMD ? 'center' : undefined,
               width: matchesSM ? undefined : '35em',
             }}>
-            <Typography variant='h4'>Trivia Game</Typography>
+            <Typography variant='h4'>Thirsty Plant</Typography>
             <Typography variant='subtitle1' className={classes.subtitle}>
-              Test your knowledge!
+              Never forget to water your plants again!
             </Typography>
             <Typography variant='subtitle1'>
-              A trivia quiz game
-              {<br />}Allows users to answer multiple choice trivia question
-              {<br />}Multiple categories and difficulty levels to choose from
-              {<br />}Complete with a leader board to see where you rank
+              A water tracker for you plants
+              {<br />}Allows users to monitor when their plants will need to be
+              watered next
+              {<br />}Tracks the last time a user watered a plant
+              {<br />}Find my Plant identification feature to easily find the
+              species of a plant.
             </Typography>
             <Button
               variant='outlined'
               color='secondary'
               className={classes.projectButton}
               component={Link}
-              to='/trivia'
+              to='/thirstyplant'
               onClick={() => {
                 props.setValue(1);
                 props.setSelectedIndex(2);
@@ -132,7 +136,7 @@ export default function Projects(props) {
             </Button>
           </Grid>
           <Grid item>
-            <HelpTwoToneIcon
+            <LocalDrinkIcon
               style={{ marginRight: matchesMD ? 0 : '.5em' }}
               className={classes.icon}
               alt='checklist icon'
@@ -140,7 +144,6 @@ export default function Projects(props) {
           </Grid>
         </Grid>
       </Grid>
-
       {/*----- Planner -----*/}
       <Grid item>
         <Grid
@@ -254,7 +257,7 @@ export default function Projects(props) {
           justify={matchesMD ? 'center' : undefined}
           alignItems='center'
           className={classes.projectContainer}
-          style={{ marginBottom: '10em', marginLeft: matchesMD ? 0 : '5em' }}>
+          style={{ marginLeft: matchesMD ? 0 : '5em' }}>
           <Grid
             item
             style={{
@@ -293,6 +296,58 @@ export default function Projects(props) {
                 marginRight: matchesMD ? 0 : '.5em',
                 marginTop: matchesMD && '.1em',
               }}
+              className={classes.icon}
+              alt='checklist icon'
+            />
+          </Grid>
+        </Grid>
+      </Grid>
+      {/*----- Trivia -----*/}
+      <Grid item>
+        <Grid
+          container
+          direction={matchesMD ? 'column' : 'row'}
+          justify={matchesMD ? 'center' : 'flex-end'}
+          alignItems='center'
+          className={classes.projectContainer}
+          style={{ marginTop: '1em' }}>
+          <Grid
+            item
+            style={{
+              textAlign: matchesMD ? 'center' : undefined,
+              width: matchesSM ? undefined : '35em',
+            }}>
+            <Typography variant='h4'>Trivia Game</Typography>
+            <Typography variant='subtitle1' className={classes.subtitle}>
+              Test your knowledge!
+            </Typography>
+            <Typography variant='subtitle1'>
+              A trivia quiz game
+              {<br />}Allows users to answer multiple choice trivia question
+              {<br />}Multiple categories and difficulty levels to choose from
+              {<br />}Complete with a leader board to see where you rank
+            </Typography>
+            <Button
+              variant='outlined'
+              color='secondary'
+              className={classes.projectButton}
+              component={Link}
+              to='/trivia'
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(2);
+              }}>
+              <span style={{ marginRight: 10 }}>Check it out</span>
+              <ButtonArrow
+                width={15}
+                height={15}
+                fill={theme.palette.common.yellow}
+              />
+            </Button>
+          </Grid>
+          <Grid item>
+            <HelpTwoToneIcon
+              style={{ marginRight: matchesMD ? 0 : '.5em' }}
               className={classes.icon}
               alt='checklist icon'
             />

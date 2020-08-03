@@ -11,7 +11,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import theme from './ui/Theme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   footer: {
     backgroundColor: theme.palette.common.slate,
     backgroundSize: 'cover',
@@ -121,6 +121,28 @@ export default function Footer(props) {
                   item
                   className={classes.link}>
                   Projects
+                </Grid>
+                <Grid
+                  component={Link}
+                  onClick={() => {
+                    props.setValue(1);
+                    props.setSelectedIndex(1);
+                  }}
+                  to='/thirstyplant'
+                  item
+                  className={classes.link}>
+                  Thirsty Plant
+                </Grid>
+                <Grid
+                  component={Link}
+                  onClick={() => {
+                    props.setValue(1);
+                    props.setSelectedIndex(1);
+                  }}
+                  to='/trivia'
+                  item
+                  className={classes.link}>
+                  Trivia App{' '}
                 </Grid>
                 <Grid
                   component={Link}
