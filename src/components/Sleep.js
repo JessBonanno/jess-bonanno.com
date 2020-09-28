@@ -166,7 +166,7 @@ export default function Sleep(props) {
 
                 </Grid>
                 <Hidden mdDown>
-                    <Grid item className={classes.arrowContainer}>
+                    <Grid item className={classes.arrowContainer} style={{marginRight: 'auto'}}>
                         <IconButton
                             style={{backgroundColor: 'transparent'}}
                             component={RouterLink}

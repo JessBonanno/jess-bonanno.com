@@ -110,7 +110,7 @@ export default function Planner(props) {
                         </IconButton>
                     </Grid>
                 </Hidden>
-                <Grid item container direction='column' className={classes.heading}>
+                <Grid item container direction='column' className={classes.heading} >
                     <Grid
                         item
                         container
@@ -272,7 +272,7 @@ export default function Planner(props) {
                     {/*</Grid>*/}
                 </Grid>
                 <Hidden mdDown>
-                    <Grid item className={classes.arrowContainer}>
+                    <Grid item className={classes.arrowContainer} style={{marginRight: 'auto'}}>
                         <IconButton
                             style={{backgroundColor: 'transparent'}}
                             component={RouterLink}
