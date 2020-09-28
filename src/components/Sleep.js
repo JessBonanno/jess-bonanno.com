@@ -15,8 +15,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import DoneAllTwoToneIcon from '@material-ui/icons/DoneAllTwoTone';
 
-import triviaMobile from '../assets/images/trivia-mobile.png';
-import plannerMac from '../assets/images/trivia-desktop.png';
+import sleepMobile from '../assets/images/sleep-mobile.png';
+import sleepMac from '../assets/images/sleep-desktop.png';
 
 const useStyles = makeStyles(theme => ({
     plannerContainer: {
@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function Planner(props) {
+export default function Sleep(props) {
     const classes = useStyles();
     const theme = useTheme();
     const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -99,8 +99,8 @@ export default function Planner(props) {
                         <IconButton
                             style={{backgroundColor: 'transparent'}}
                             component={RouterLink}
-                            alt='back to arc development'
-                            to='/arc'
+                            alt='back to planner app'
+                            to='/planner'
                             onClick={() => props.setSelectedIndex(2)}>
                             <ArrowBackIcon className={classes.arrow}/>
                         </IconButton>
@@ -113,7 +113,7 @@ export default function Planner(props) {
                         alignItems={matchesMD ? 'center' : 'center'}
                         direction={matchesMD ? 'column' : 'row'}>
                         <Typography variant='h4' align={matchesMD ? 'center' : undefined}>
-                            Trivia Game
+                            Sleep Like A Baby
                         </Typography>
                     </Grid>
                     <Grid
@@ -133,22 +133,29 @@ export default function Planner(props) {
                                 margin: '1em 0 0',
                             }}>
                             React | Javascript | Material-UI | SQL | Node | Express | Git |
-                            Firebase
                         </Typography>
                     </Grid>
                     <Grid item className={classes.links}>
 
                         <Link
                             style={{marginLeft: matchesMD ? 0 : '1em', margin: theme.spacing(1)}}
-                            href='https://github.com/WebPT16'
+                            href='https://github.com/JessBonanno/sleep-like-a-baby-frontend'
                             color='secondary'
                             rel='noopener noreferrer'
                             target='_blank'>
-                            View Repo
+                            View Client Code
+                        </Link>
+                        <Link
+                            style={{marginLeft: matchesMD ? 0 : '1em', margin: theme.spacing(1)}}
+                            href='https://github.com/JessBonanno/sleep-like-a-baby-api'
+                            color='secondary'
+                            rel='noopener noreferrer'
+                            target='_blank'>
+                            View API Code
                         </Link>
                         <Link
                             style={{marginLeft: matchesMD ? 0 : '1em'}}
-                            href='https://trivia-for-days.netlify.app/'
+                            href='https://sleep-like-a-baby.vercel.app/'
                             color='secondary'
                             rel='noopener noreferrer'
                             target='_blank'>
@@ -157,116 +164,6 @@ export default function Planner(props) {
 
                     </Grid>
 
-                    {/*      <Grid*/}
-                    {/*        item*/}
-                    {/*        container*/}
-                    {/*        justify={matchesMD ? 'center' : 'flex-start'}*/}
-                    {/*        style={{ margin: '1em 0 2em' }}>*/}
-                    {/*        <Grid item>*/}
-                    {/*          <Grid item>*/}
-                    {/*            <List dense style={{ padding: 0 }}>*/}
-                    {/*              <ListItem disableGutters>*/}
-                    {/*                <ListItemIcon>*/}
-                    {/*                  <DoneAllTwoToneIcon*/}
-                    {/*                    style={{*/}
-                    {/*                      fontSize: '1rem',*/}
-                    {/*                      marginBottom: '.3em',*/}
-                    {/*                      width: 50,*/}
-                    {/*                      color: theme.palette.common.yellow,*/}
-                    {/*                    }}*/}
-                    {/*                  />*/}
-                    {/*                </ListItemIcon>*/}
-                    {/*                <ListItemText*/}
-                    {/*                  classes={{ primary: classes.listText }}*/}
-                    {/*                  primary='Built a fully responsive user interface using React and Material-UI.*/}
-                    {/*'*/}
-                    {/*                />*/}
-                    {/*              </ListItem>*/}
-                    {/*            </List>*/}
-                    {/*          </Grid>*/}
-                    {/*          <Grid item>*/}
-                    {/*            <List dense style={{ padding: 0 }}>*/}
-                    {/*              <ListItem disableGutters>*/}
-                    {/*                <ListItemIcon>*/}
-                    {/*                  <DoneAllTwoToneIcon*/}
-                    {/*                    style={{*/}
-                    {/*                      fontSize: '1rem',*/}
-                    {/*                      marginBottom: '.3em',*/}
-                    {/*                      width: 50,*/}
-                    {/*                      color: theme.palette.common.yellow,*/}
-                    {/*                    }}*/}
-                    {/*                  />*/}
-                    {/*                </ListItemIcon>*/}
-                    {/*                <ListItemText*/}
-                    {/*                  classes={{ primary: classes.listText }}*/}
-                    {/*                  primary='Created SPA functionality using the React Router library.'*/}
-                    {/*                />*/}
-                    {/*              </ListItem>*/}
-                    {/*            </List>*/}
-                    {/*          </Grid>*/}
-
-                    {/*          <Grid item>*/}
-                    {/*            <List dense style={{ padding: 0 }}>*/}
-                    {/*              <ListItem disableGutters>*/}
-                    {/*                <ListItemIcon>*/}
-                    {/*                  <DoneAllTwoToneIcon*/}
-                    {/*                    style={{*/}
-                    {/*                      fontSize: '1rem',*/}
-                    {/*                      marginBottom: '.3em',*/}
-                    {/*                      width: 50,*/}
-                    {/*                      color: theme.palette.common.yellow,*/}
-                    {/*                    }}*/}
-                    {/*                  />*/}
-                    {/*                </ListItemIcon>*/}
-                    {/*                <ListItemText*/}
-                    {/*                  classes={{ primary: classes.listText }}*/}
-                    {/*                  primary='Developed backend REST API with Node Express and SQL.'*/}
-                    {/*                />*/}
-                    {/*              </ListItem>*/}
-                    {/*            </List>*/}
-                    {/*          </Grid>*/}
-                    {/*          <Grid item>*/}
-                    {/*            <List dense style={{ padding: 0 }}>*/}
-                    {/*              <ListItem disableGutters>*/}
-                    {/*                <ListItemIcon>*/}
-                    {/*                  <DoneAllTwoToneIcon*/}
-                    {/*                    style={{*/}
-                    {/*                      fontSize: '1rem',*/}
-                    {/*                      marginBottom: '.3em',*/}
-                    {/*                      width: 50,*/}
-                    {/*                      color: theme.palette.common.yellow,*/}
-                    {/*                    }}*/}
-                    {/*                  />*/}
-                    {/*                </ListItemIcon>*/}
-                    {/*                <ListItemText*/}
-                    {/*                  classes={{ primary: classes.listText }}*/}
-                    {/*                  primary='Implemented leaderboard to keep track of user scores by category or difficulty.'*/}
-                    {/*                />*/}
-                    {/*              </ListItem>*/}
-                    {/*            </List>*/}
-                    {/*          </Grid>*/}
-                    {/*          <Grid item>*/}
-                    {/*            <List dense style={{ padding: 0 }}>*/}
-                    {/*              <ListItem disableGutters>*/}
-                    {/*                <ListItemIcon>*/}
-                    {/*                  <DoneAllTwoToneIcon*/}
-                    {/*                    style={{*/}
-                    {/*                      fontSize: '1rem',*/}
-                    {/*                      marginBottom: '.3em',*/}
-                    {/*                      width: 50,*/}
-                    {/*                      color: theme.palette.common.yellow,*/}
-                    {/*                    }}*/}
-                    {/*                  />*/}
-                    {/*                </ListItemIcon>*/}
-                    {/*                <ListItemText*/}
-                    {/*                  classes={{ primary: classes.listText }}*/}
-                    {/*                  primary='Worked effectively on a team of developers.'*/}
-                    {/*                />*/}
-                    {/*              </ListItem>*/}
-                    {/*            </List>*/}
-                    {/*          </Grid>*/}
-                    {/*        </Grid>{' '}*/}
-                    {/*      </Grid>*/}
                 </Grid>
                 <Hidden mdDown>
                     <Grid item className={classes.arrowContainer}>
@@ -283,7 +180,7 @@ export default function Planner(props) {
                 <Hidden mdDown>
                     <Grid item>
                         <img
-                            src={triviaMobile}
+                            src={sleepMobile}
                             alt='mobile trivia'
                             style={{maxHeight: matchesSM ? 200 : 400}}
                         />
@@ -302,9 +199,9 @@ export default function Planner(props) {
                     md>
                     <Grid item style={{margin: '2em'}}>
                         <img
-                            src={plannerMac}
+                            src={sleepMac}
                             alt='desktop trivia'
-                            style={{maxWidth: matchesSM ? '100%' : 700}}
+                            style={{maxWidth: matchesSM ? '100%' : 900}}
                         />
                     </Grid>
                 </Grid>
@@ -318,7 +215,7 @@ export default function Planner(props) {
                         md>
                         <Grid item>
                             <img
-                                src={triviaMobile}
+                                src={sleepMobile}
                                 alt='mobile trivia'
                                 style={{
                                     maxHeight: matchesXS ? 200 : 400,

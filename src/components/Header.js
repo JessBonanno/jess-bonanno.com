@@ -154,37 +154,38 @@ export default function Header(props) {
       activeIndex: 1,
       selectedIndex: 0,
     },
+      {
+      name: 'Sleep Like A Baby',
+      link: '/sleep',
+      activeIndex: 1,
+      selectedIndex: 1,
+    },
     {
       name: 'Thirsty Plant',
       link: '/thirstyplant',
       activeIndex: 1,
-      selectedIndex: 1,
+      selectedIndex: 2,
     },
 
     {
       name: 'Planner App',
       link: '/planner',
       activeIndex: 1,
-      selectedIndex: 2,
-    },
-    {
-      name: 'Isolation Recommendations',
-      link: '/isolation-recommendations',
-      activeIndex: 1,
       selectedIndex: 3,
     },
-    {
-      name: 'Arc Development',
-      link: '/arc',
-      activeIndex: 1,
-      selectedIndex: 4,
-    },
-    {
-      name: 'Trivia Game',
-      link: '/trivia',
-      activeIndex: 1,
-      selectedIndex: 5,
-    },
+    // {
+    //   name: 'Isolation Recommendations',
+    //   link: '/isolation-recommendations',
+    //   activeIndex: 1,
+    //   selectedIndex: 3,
+    // },
+    // {
+    //   name: 'Arc Development',
+    //   link: '/arc',
+    //   activeIndex: 1,
+    //   selectedIndex: 4,
+    // },
+
   ];
 
   const routes = [

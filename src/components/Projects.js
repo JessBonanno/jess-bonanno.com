@@ -90,7 +90,7 @@ export default function Projects(props) {
           Projects
         </Typography>
       </Grid>
-      {/*----- ThirstyPlant -----*/}
+            {/*----- Sleep -----*/}
       <Grid item>
         <Grid
           container
@@ -98,7 +98,59 @@ export default function Projects(props) {
           justify={matchesMD ? 'center' : 'flex-end'}
           alignItems='center'
           className={classes.projectContainer}
-          style={{ marginTop: matchesSM ? '1em' : '5em' }}>
+          style={{ marginTop: '1em' }}>
+          <Grid
+            item
+            style={{
+              textAlign: matchesMD ? 'center' : undefined,
+              width: matchesSM ? undefined : '35em',
+            }}>
+            <Typography variant='h4'>Sleep Like A Baby</Typography>
+            <Typography variant='subtitle1' className={classes.subtitle}>
+              Sleep tracking
+            </Typography>
+            <Typography variant='subtitle1'>
+
+              {<br />}Allows users to enter their bedtime and wake time
+              {<br />}They then rate how they felt through the day
+              {<br />}The app tracks hours slept and ratings over time to find the users sweet spot of sleep
+            </Typography>
+            <Button
+              variant='outlined'
+              color='secondary'
+              className={classes.projectButton}
+              component={Link}
+              to='/sleep'
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(2);
+              }}>
+              <span style={{ marginRight: 10 }}>Check it out</span>
+              <ButtonArrow
+                width={15}
+                height={15}
+                fill={theme.palette.common.yellow}
+              />
+            </Button>
+          </Grid>
+          <Grid item>
+            <HelpTwoToneIcon
+              style={{ marginRight: matchesMD ? 0 : '.5em' }}
+              className={classes.icon}
+              alt='checklist icon'
+            />
+          </Grid>
+        </Grid>
+      </Grid>
+      {/*----- ThirstyPlant -----*/}
+      <Grid item>
+        <Grid
+          container
+          direction={matchesMD ? 'column' : 'row'}
+          justify={matchesMD ? 'center' : 'flex-start'}
+          alignItems='center'
+          className={classes.projectContainer}
+          style={{ marginLeft: matchesMD ? 0 : '5em' }}>
           <Grid
             item
             style={{
@@ -149,10 +201,10 @@ export default function Projects(props) {
         <Grid
           container
           direction={matchesMD ? 'column' : 'row'}
-          justify={matchesMD ? 'center' : undefined}
+          justify={matchesMD ? 'center' : 'flex-end'}
           alignItems='center'
           className={classes.projectContainer}
-          style={{ marginLeft: matchesMD ? 0 : '5em' }}>
+          style={{ marginTop: '10em' }}>
           <Grid
             item
             style={{
@@ -196,164 +248,61 @@ export default function Projects(props) {
           </Grid>
         </Grid>
       </Grid>
-      {/*----- Isolation -----*/}
-      <Grid item>
-        <Grid
-          container
-          direction={matchesMD ? 'column' : 'row'}
-          justify={matchesMD ? 'center' : 'flex-end'}
-          alignItems='center'
-          className={classes.projectContainer}>
-          <Grid
-            item
-            style={{
-              textAlign: matchesMD ? 'center' : undefined,
-            }}>
-            <Typography variant='h4'>Isolation Recommendation</Typography>
-            <Typography variant='subtitle1' className={classes.subtitle}>
-              Music during quarantine
-            </Typography>
-            <Typography variant='subtitle1'>
-              A song suggester based on users musical interests {<br />}Users
-              are reminded it's important to stay home during the pandemic{' '}
-              {<br />} This application aims to provide entertainment to users
-              while stuck inside
-            </Typography>
-            <Button
-              variant='outlined'
-              color='secondary'
-              className={classes.projectButton}
-              component={Link}
-              to='/isolation-recommendations'
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(2);
-              }}>
-              <span style={{ marginRight: 10 }}>Check it out</span>
-              <ButtonArrow
-                width={15}
-                height={15}
-                fill={theme.palette.common.yellow}
-              />
-            </Button>
-          </Grid>
-          <Grid item>
-            <HeadsetTwoToneIcon
-              style={{
-                marginRight: matchesMD ? 0 : '.5em',
-                marginTop: matchesMD && '.2em',
-              }}
-              className={classes.icon}
-              alt='checklist icon'
-            />
-          </Grid>
-        </Grid>
-      </Grid>
-      {/*----- Arc -----*/}
-      <Grid item>
-        <Grid
-          container
-          direction={matchesMD ? 'column' : 'row'}
-          justify={matchesMD ? 'center' : undefined}
-          alignItems='center'
-          className={classes.projectContainer}
-          style={{ marginLeft: matchesMD ? 0 : '5em' }}>
-          <Grid
-            item
-            style={{
-              textAlign: matchesMD ? 'center' : undefined,
-              width: matchesMD ? undefined : '35em',
-            }}>
-            <Typography variant='h4'>Arc Development</Typography>
-            <Typography variant='subtitle1' className={classes.subtitle}>
-              A complete SPA
-            </Typography>
-            <Typography variant='subtitle1'>
-              A marketing website for a software development company
-              {<br />}Built to showcase and promote the company{<br />}
-            </Typography>
-            <Button
-              variant='outlined'
-              color='secondary'
-              className={classes.projectButton}
-              component={Link}
-              to='/arc'
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(2);
-              }}>
-              <span style={{ marginRight: 10 }}>Check it out</span>
-              <ButtonArrow
-                width={15}
-                height={15}
-                fill={theme.palette.common.yellow}
-              />
-            </Button>
-          </Grid>
-          <Grid item style={{ marginRight: matchesMD ? 0 : '5em' }}>
-            <LaptopChromebookTwoToneIcon
-              style={{
-                marginRight: matchesMD ? 0 : '.5em',
-                marginTop: matchesMD && '.1em',
-              }}
-              className={classes.icon}
-              alt='checklist icon'
-            />
-          </Grid>
-        </Grid>
-      </Grid>
-      {/*----- Trivia -----*/}
-      <Grid item>
-        <Grid
-          container
-          direction={matchesMD ? 'column' : 'row'}
-          justify={matchesMD ? 'center' : 'flex-end'}
-          alignItems='center'
-          className={classes.projectContainer}
-          style={{ marginTop: '1em' }}>
-          <Grid
-            item
-            style={{
-              textAlign: matchesMD ? 'center' : undefined,
-              width: matchesSM ? undefined : '35em',
-            }}>
-            <Typography variant='h4'>Trivia Game</Typography>
-            <Typography variant='subtitle1' className={classes.subtitle}>
-              Test your knowledge!
-            </Typography>
-            <Typography variant='subtitle1'>
-              A trivia quiz game
-              {<br />}Allows users to answer multiple choice trivia question
-              {<br />}Multiple categories and difficulty levels to choose from
-              {<br />}Complete with a leader board to see where you rank
-            </Typography>
-            <Button
-              variant='outlined'
-              color='secondary'
-              className={classes.projectButton}
-              component={Link}
-              to='/trivia'
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(2);
-              }}>
-              <span style={{ marginRight: 10 }}>Check it out</span>
-              <ButtonArrow
-                width={15}
-                height={15}
-                fill={theme.palette.common.yellow}
-              />
-            </Button>
-          </Grid>
-          <Grid item>
-            <HelpTwoToneIcon
-              style={{ marginRight: matchesMD ? 0 : '.5em' }}
-              className={classes.icon}
-              alt='checklist icon'
-            />
-          </Grid>
-        </Grid>
-      </Grid>
+
+      {/*/!*----- Arc -----*!/*/}
+      {/*<Grid item>*/}
+      {/*  <Grid*/}
+      {/*    container*/}
+      {/*    direction={matchesMD ? 'column' : 'row'}*/}
+      {/*    justify={matchesMD ? 'center' : undefined}*/}
+      {/*    alignItems='center'*/}
+      {/*    className={classes.projectContainer}*/}
+      {/*    style={{ marginLeft: matchesMD ? 0 : '5em' }}>*/}
+      {/*    <Grid*/}
+      {/*      item*/}
+      {/*      style={{*/}
+      {/*        textAlign: matchesMD ? 'center' : undefined,*/}
+      {/*        width: matchesMD ? undefined : '35em',*/}
+      {/*      }}>*/}
+      {/*      <Typography variant='h4'>Arc Development</Typography>*/}
+      {/*      <Typography variant='subtitle1' className={classes.subtitle}>*/}
+      {/*        A complete SPA*/}
+      {/*      </Typography>*/}
+      {/*      <Typography variant='subtitle1'>*/}
+      {/*        A marketing website for a software development company*/}
+      {/*        {<br />}Built to showcase and promote the company{<br />}*/}
+      {/*      </Typography>*/}
+      {/*      <Button*/}
+      {/*        variant='outlined'*/}
+      {/*        color='secondary'*/}
+      {/*        className={classes.projectButton}*/}
+      {/*        component={Link}*/}
+      {/*        to='/arc'*/}
+      {/*        onClick={() => {*/}
+      {/*          props.setValue(1);*/}
+      {/*          props.setSelectedIndex(2);*/}
+      {/*        }}>*/}
+      {/*        <span style={{ marginRight: 10 }}>Check it out</span>*/}
+      {/*        <ButtonArrow*/}
+      {/*          width={15}*/}
+      {/*          height={15}*/}
+      {/*          fill={theme.palette.common.yellow}*/}
+      {/*        />*/}
+      {/*      </Button>*/}
+      {/*    </Grid>*/}
+      {/*    <Grid item style={{ marginRight: matchesMD ? 0 : '5em' }}>*/}
+      {/*      <LaptopChromebookTwoToneIcon*/}
+      {/*        style={{*/}
+      {/*          marginRight: matchesMD ? 0 : '.5em',*/}
+      {/*          marginTop: matchesMD && '.1em',*/}
+      {/*        }}*/}
+      {/*        className={classes.icon}*/}
+      {/*        alt='checklist icon'*/}
+      {/*      />*/}
+      {/*    </Grid>*/}
+      {/*  </Grid>*/}
+      {/*</Grid>*/}
+
     </Grid>
   );
 }

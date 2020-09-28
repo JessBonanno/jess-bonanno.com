@@ -293,8 +293,8 @@ export default function Planner(props) {
                         <IconButton
                             style={{backgroundColor: 'transparent'}}
                             component={RouterLink}
-                            alt='forward isolation recommendations'
-                            to='/isolation-recommendations'
+                            alt='forward sleep like a baby'
+                            to='/sleep'
                             onClick={() => props.setSelectedIndex(2)}>
                             <ArrowForwardIcon className={classes.arrow}/>
                         </IconButton>

@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 
-import resume from '../assets/images/Resume.jpg';
+import resume from '../assets/images/resume.jpg';
 
 const useStyles = makeStyles((theme) => ({
   resumeContainer: {
@@ -75,7 +75,7 @@ export default function Resume() {
         <Grid item className={classes.resumeLink}>
           <Link
             style={{ fontFamily: 'Lexend Giga, sans-serif' }}
-            href='https://docs.google.com/document/d/1cyUOxqR2nS66zWMthlm-MTF0pX7Iub5-mI33sInXvLo/edit?usp=sharing'
+            href='https://docs.google.com/document/d/1PAEegFFs2yCWBs5ZnmN6Mbk88F4OX0fgM1U-VvwqLAA/edit'
             color='secondary'>
             View Document
           </Link>

@@ -122,6 +122,17 @@ export default function Footer(props) {
                   className={classes.link}>
                   Projects
                 </Grid>
+                   <Grid
+                  component={Link}
+                  onClick={() => {
+                    props.setValue(1);
+                    props.setSelectedIndex(1);
+                  }}
+                  to='/sleep'
+                  item
+                  className={classes.link}>
+                  Sleep Like A Baby{' '}
+                </Grid>
                 <Grid
                   component={Link}
                   onClick={() => {
@@ -133,17 +144,7 @@ export default function Footer(props) {
                   className={classes.link}>
                   Thirsty Plant
                 </Grid>
-                <Grid
-                  component={Link}
-                  onClick={() => {
-                    props.setValue(1);
-                    props.setSelectedIndex(1);
-                  }}
-                  to='/trivia'
-                  item
-                  className={classes.link}>
-                  Trivia App{' '}
-                </Grid>
+
                 <Grid
                   component={Link}
                   onClick={() => {
@@ -155,28 +156,28 @@ export default function Footer(props) {
                   className={classes.link}>
                   Planner App
                 </Grid>
-                <Grid
-                  component={Link}
-                  onClick={() => {
-                    props.setValue(1);
-                    props.setSelectedIndex(2);
-                  }}
-                  to='/isolation-recommendations'
-                  item
-                  className={classes.link}>
-                  Isolation Recommendations
-                </Grid>
-                <Grid
-                  component={Link}
-                  onClick={() => {
-                    props.setValue(1);
-                    props.setSelectedIndex(3);
-                  }}
-                  to='/arc'
-                  item
-                  className={classes.link}>
-                  Arc Development
-                </Grid>
+                {/*<Grid*/}
+                {/*  component={Link}*/}
+                {/*  onClick={() => {*/}
+                {/*    props.setValue(1);*/}
+                {/*    props.setSelectedIndex(2);*/}
+                {/*  }}*/}
+                {/*  to='/isolation-recommendations'*/}
+                {/*  item*/}
+                {/*  className={classes.link}>*/}
+                {/*  Isolation Recommendations*/}
+                {/*</Grid>*/}
+                {/*<Grid*/}
+                {/*  component={Link}*/}
+                {/*  onClick={() => {*/}
+                {/*    props.setValue(1);*/}
+                {/*    props.setSelectedIndex(3);*/}
+                {/*  }}*/}
+                {/*  to='/arc'*/}
+                {/*  item*/}
+                {/*  className={classes.link}>*/}
+                {/*  Arc Development*/}
+                {/*</Grid>*/}
               </Grid>
             </Grid>
             <Grid item className={classes.gridItem}>

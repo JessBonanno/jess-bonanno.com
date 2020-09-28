@@ -8,13 +8,14 @@ import LandingPage from './LandingPage';
 import Footer from './Footer';
 import Resume from './Resume';
 import Projects from './Projects';
-import Trivia from './Trivia';
+import Trivia from './Sleep';
 import About from './About';
 import Planner from './Planner';
 import Isolation from './Isolation';
 import Arc from './Arc';
 import Contact from './Contact';
 import ThirstyPlant from './ThirstyPlant';
+import Sleep from "./Sleep";
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -76,9 +77,9 @@ function App() {
           />
           <Route
             exact
-            path='/trivia'
+            path='/sleep'
             render={props => (
-              <Trivia
+              <Sleep
                 {...props}
                 setSelectedIndex={setSelectedIndex}
                 setValue={setValue}
