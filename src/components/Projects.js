@@ -205,7 +205,7 @@ export default function Projects(props) {
           justify={matchesMD ? 'center' : 'flex-end'}
           alignItems='center'
           className={classes.projectContainer}
-          style={{ marginTop: '10em' }}>
+          >
           <Grid
             item
             style={{
