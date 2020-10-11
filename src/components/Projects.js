@@ -8,6 +8,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PlaylistAddCheckTwoToneIcon from '@material-ui/icons/PlaylistAddCheckTwoTone';
 import HeadsetTwoToneIcon from '@material-ui/icons/HeadsetTwoTone';
 import LaptopChromebookTwoToneIcon from '@material-ui/icons/LaptopChromebookTwoTone';
+import NightsStayIcon from '@material-ui/icons/NightsStay';
 import HelpTwoToneIcon from '@material-ui/icons/HelpTwoTone';
 import LocalDrinkIcon from '@material-ui/icons/LocalDrink';
 import ButtonArrow from './ButtonArrow';
@@ -134,7 +135,7 @@ export default function Projects(props) {
             </Button>
           </Grid>
           <Grid item>
-            <HelpTwoToneIcon
+            <NightsStayIcon
               style={{ marginRight: matchesMD ? 0 : '.5em' }}
               className={classes.icon}
               alt='checklist icon'
