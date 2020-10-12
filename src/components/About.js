@@ -140,8 +140,7 @@ export default function About(props) {
           align='center'
           className={classes.stack}
           style={{ color: theme.palette.common.yellow }}>
-         Python | Javascript | Typescript | React | Redux | Node | SQL | GIT | Express | Agile | HTML
-          | CSS | Jest
+         Python | Javascript | Typescript | React |  Nodejs | Express |  SQL | HTML | CSS | Jest | GIT | Agile
         </Typography>
       </Grid>
 
