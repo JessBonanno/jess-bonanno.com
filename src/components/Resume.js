@@ -72,14 +72,14 @@ export default function Resume() {
   return (
     <Grid container className={classes.resumeContainer} justify='center'>
       <Grid item className={classes.resumeItem} align='center'>
-        <Grid item className={classes.resumeLink}>
-          <Link
-            style={{ fontFamily: 'Lexend Giga, sans-serif' }}
-            href='https://docs.google.com/document/d/1PAEegFFs2yCWBs5ZnmN6Mbk88F4OX0fgM1U-VvwqLAA/edit'
-            color='secondary'>
-            View Document
-          </Link>
-        </Grid>
+        {/*<Grid item className={classes.resumeLink}>*/}
+        {/*  <Link*/}
+        {/*    style={{ fontFamily: 'Lexend Giga, sans-serif' }}*/}
+        {/*    href='https://docs.google.com/document/d/1PAEegFFs2yCWBs5ZnmN6Mbk88F4OX0fgM1U-VvwqLAA/edit'*/}
+        {/*    color='secondary'>*/}
+        {/*    View Document*/}
+        {/*  </Link>*/}
+        {/*</Grid>*/}
         <Paper className={classes.resumePaper} elevation={10}>
           <img src={resume} alt='resume' className={classes.resumeImg} />
         </Paper>
