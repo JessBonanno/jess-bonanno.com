@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React, {useEffect} from 'react';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Hidden from '@material-ui/core/Hidden';
-import DesktopWindowsTwoToneIcon from '@material-ui/icons/DesktopWindowsTwoTone';
+import DesktopWindowsTwoToneIcon
+  from '@material-ui/icons/DesktopWindowsTwoTone';
 import me from '../assets/images/me.jpg';
 import jetski from '../assets/images/jetski.jpg';
 import copper from '../assets/images/copper.jpg';
@@ -108,7 +109,7 @@ export default function About(props) {
       <Grid
         item
         className={classes.rowContainer}
-        style={{ marginTop: matchesMD ? '1em' : '2em' }}>
+        style={{marginTop: matchesMD ? '1em' : '2em'}}>
         <Typography
           align={matchesMD ? 'center' : undefined}
           variant='h2'
@@ -120,12 +121,12 @@ export default function About(props) {
       <Grid
         item
         className={classes.rowContainer}
-        style={{ marginTop: matchesMD ? '1em' : '2em' }}>
+        style={{marginTop: matchesMD ? '1em' : '2em'}}>
         <Typography
           align={matchesMD ? 'center' : undefined}
           variant='h4'
           className={classes.aboutTitle}
-          style={{ color: theme.palette.common.lightBlue, fontSize: '2.3rem' }}>
+          style={{color: theme.palette.common.lightBlue, fontSize: '2.3rem'}}>
           My Stack
         </Typography>
       </Grid>
@@ -134,13 +135,14 @@ export default function About(props) {
         container
         justify='center'
         className={classes.rowContainer}
-        style={{ marginTop: '2em' }}>
+        style={{marginTop: '2em'}}>
         <Typography
           variant='body2'
           align='center'
           className={classes.stack}
-          style={{ color: theme.palette.common.yellow }}>
-         Python | Javascript | Typescript | React |  Nodejs | Express |  SQL | HTML | CSS | Jest | GIT | Agile
+          style={{color: theme.palette.common.yellow}}>
+          Python | Javascript | Typescript | React | Nodejs | Express | SQL |
+          HTML | CSS | Jest | GIT | Agile
         </Typography>
       </Grid>
 
@@ -151,14 +153,14 @@ export default function About(props) {
         direction={matchesMD ? 'column' : 'row'}
         alignItems={matchesMD ? 'center' : undefined}
         justify='space-around'
-        style={{ marginTop: matchesMD ? 0 : '5em', marginBottom: '5em' }}>
+        style={{marginTop: matchesMD ? 0 : '5em', marginBottom: '5em'}}>
         <Grid item>
           <Grid
             item
             container
             direction='column'
             lg
-            style={{ maxWidth: '35em' }}>
+            style={{maxWidth: '35em'}}>
             <Grid item>
               <Typography
                 align={matchesMD ? 'center' : undefined}
@@ -170,7 +172,7 @@ export default function About(props) {
             <Hidden lgUp>
               <Grid item>
                 <Grid item container justify='center' lg>
-                  <DesktopWindowsTwoToneIcon className={classes.icon} />
+                  <DesktopWindowsTwoToneIcon className={classes.icon}/>
                   {/* <img
                 // src={history}
                 alt="quill pen sitting on top of book"
@@ -183,13 +185,6 @@ export default function About(props) {
               <Typography
                 align={matchesMD ? 'center' : undefined}
                 variant='body1'
-                paragraph
-                style={{ fontWeight: 700, fontStyle: 'italic' }}>
-                I'm ready to make a name for myself
-              </Typography>
-              <Typography
-                align={matchesMD ? 'center' : undefined}
-                variant='body1'
                 paragraph>
                 What I create reflects upon myself and I take that very
                 seriously.
@@ -198,8 +193,8 @@ export default function About(props) {
                 align={matchesMD ? 'center' : undefined}
                 variant='body1'
                 paragraph>
-                I aim to create fully responsive websites with a solid backend
-                to support them. I don't just focus on the frontend, I design
+                I aim to create fully responsive websites. I don't just focus on
+                the frontend, I design
                 the backend with the same meticulousness. A structure is only as
                 solid as its foundation.
               </Typography>
@@ -226,7 +221,7 @@ export default function About(props) {
         <Hidden mdDown>
           <Grid item>
             <Grid item container justify='center' lg>
-              <DesktopWindowsTwoToneIcon className={classes.icon} />
+              <DesktopWindowsTwoToneIcon className={classes.icon}/>
               {/* <img
                 // src={history}
                 alt="quill pen sitting on top of book"
@@ -243,7 +238,7 @@ export default function About(props) {
         direction='column'
         className={classes.rowContainer}
         alignItems='center'
-        style={{ marginBottom: '15em', marginTop: matchesMD ? '1em' : '2em' }}>
+        style={{marginBottom: '15em', marginTop: matchesMD ? '1em' : '2em'}}>
         <Grid item>
           <Typography variant='h4' align='center'>
             Jess Bonanno
@@ -252,7 +247,7 @@ export default function About(props) {
         <Grid item>
           <Typography
             variant='body1'
-            style={{ fontSize: '1.6em' }}
+            style={{fontSize: '1.6em'}}
             paragraph
             align='center'>
             A Fullstack Developer
@@ -263,7 +258,7 @@ export default function About(props) {
           container
           justify='center'
           className={classes.rowContainer}
-          style={{ marginTop: '1em' }}>
+          style={{marginTop: '1em'}}>
           <Typography
             variant='body2'
             align='center'
@@ -274,15 +269,14 @@ export default function About(props) {
           </Typography>
         </Grid>
         <Grid item>
-          <Avatar alt='founder' src={me} className={classes.myPic} />
+          <Avatar alt='founder' src={me} className={classes.myPic}/>
         </Grid>
         <Grid item container justify={matchesMD ? 'center' : undefined}>
           <Hidden lgUp>
-            <Grid item lg style={{ maxWidth: '45em', padding: '1.25em' }}>
+            <Grid item lg style={{maxWidth: '45em', padding: '1.25em'}}>
               <Typography variant='body1' align='center' paragraph>
                 Hey, I'm Jess. I'm currently based out of NJ.
               </Typography>
-
               <Typography variant='body1' align='center' paragraph>
                 I have always been passionate about all things tech & extremely
                 driven to figure out how and why things work.
@@ -294,6 +288,11 @@ export default function About(props) {
               <Typography variant='body1' align='center' paragraph>
                 Working with technology suits me well as it is constantly
                 evolving and there is always something new to master.
+              </Typography>
+              <Typography variant='body1' align='center' paragraph>
+                I enjoy teaching and mentoring others in my spare time. I love
+                working in a team environment as well. Finding new ways of
+                looking at things from my peers excites me.
               </Typography>
               <Typography variant='body1' align='center' paragraph>
                 I am skilled in HTML, CSS, Javascript, React.js, Express,
@@ -309,12 +308,12 @@ export default function About(props) {
             direction='column'
             lg
             alignItems={matchesMD ? 'center' : undefined}
-            style={{ marginBottom: matchesMD ? '2.5em' : 0 }}>
+            style={{marginBottom: matchesMD ? '2.5em' : 0}}>
             <Grid item>
               <img
                 src={copper}
                 alt='my chihuahua'
-                style={{ maxWidth: matchesMD ? 300 : 300 }}
+                style={{maxWidth: matchesMD ? 300 : 300}}
               />
             </Grid>
             <Grid item>
@@ -324,11 +323,10 @@ export default function About(props) {
             </Grid>
           </Grid>
           <Hidden mdDown>
-            <Grid item lg style={{ maxWidth: '45em', padding: '1.25em' }}>
+            <Grid item lg style={{maxWidth: '45em', padding: '1.25em'}}>
               <Typography variant='body1' align='center' paragraph>
                 Hey, I'm Jess. I'm currently based out of NJ.
               </Typography>
-
               <Typography variant='body1' align='center' paragraph>
                 I have always been passionate about all things tech & extremely
                 driven to figure out how and why things work.
@@ -342,8 +340,13 @@ export default function About(props) {
                 evolving and there is always something new to master.
               </Typography>
               <Typography variant='body1' align='center' paragraph>
+                I enjoy teaching and mentoring others in my spare time. I love
+                working in a team environment as well. Finding new ways of
+                looking at things from my peers excites me.
+              </Typography>
+              <Typography variant='body1' align='center' paragraph>
                 I am skilled in HTML, CSS, Javascript, React.js, Express,
-                Node.js, and SQL. I look forward to expanding this stack to meet
+                Node.js, SQL, and Python. I look forward to expanding this stack to meet
                 the demands of any problems I work to solve in the future.
               </Typography>
             </Grid>
@@ -358,7 +361,7 @@ export default function About(props) {
               <img
                 src={jetski}
                 alt='jess on a jetski'
-                style={{ maxWidth: matchesMD ? 300 : 300 }}
+                style={{maxWidth: matchesMD ? 300 : 300}}
               />
             </Grid>
             <Grid item>
