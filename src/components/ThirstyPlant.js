@@ -136,7 +136,7 @@ export default function Planner(props) {
                                 fontSize: '1em',
                                 margin: '1em 0 0',
                             }}>
-                            React | Javascript | Material-UI | Git
+                            Javascript | React | Context API | Material-UI
                         </Typography>
                         <Grid item className={classes.links}>
 

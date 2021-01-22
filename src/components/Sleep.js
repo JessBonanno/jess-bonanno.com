@@ -132,7 +132,7 @@ export default function Sleep(props) {
                                 fontSize: '1em',
                                 margin: '1em 0 0',
                             }}>
-                            React | Javascript | Material-UI | SQL | Node | Express | Git |
+                            Javascript | React | Context API | Jest | Material-UI | Postgresql | Node | Express
                         </Typography>
                     </Grid>
                     <Grid item className={classes.links}>
