@@ -142,7 +142,7 @@ export default function Planner(props) {
 
                             <Link
                                 style={{marginLeft: matchesMD ? 0 : '1em', margin: theme.spacing(1)}}
-                                href='https://github.com/BW-TT-WaterMyPlants/front-end'
+                                href='https://github.com/JessBonanno/thirsty-plant-frontend'
                                 color='secondary'
                                 rel='noopener noreferrer'
                                 target='_blank'>
@@ -150,7 +150,7 @@ export default function Planner(props) {
                             </Link>
                             <Link
                                 style={{marginLeft: matchesMD ? 0 : '1em'}}
-                                href='https://watermyplantsjuly2020.netlify.app/'
+                                href='https://thirsty-plant.vercel.app/'
                                 color='secondary'
                                 rel='noopener noreferrer'
                                 target='_blank'>
